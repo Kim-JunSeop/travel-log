@@ -3,6 +3,20 @@
 <div id="mainPjax">
     <div class="main story">
         <div id="container">
+            <div class="filter-section">
+                <input type="radio" id="myMarkers" name="markerFilter" value="myMarkers" checked>
+                <label for="myMarkers">내 게시물</label><br>
+                <input type="radio" id="friendsMarkers" name="markerFilter" value="friendsMarkers">
+                <label for="friendsMarkers">친구 게시물</label><br>
+                <input type="radio" id="allMarkers" name="markerFilter" value="allMarkers">
+                <label for="allMarkers">전체 게시물</label>
+            </div>
+            <div class="col-4 input-group">
+                <input type="text" class="form-control kw" value="{{ kw or '' }}" placeholder="검색어를 입력해 주세요">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" id="btn_search">찾기</button>
+                </div>
+            </div>
             <div id="list">
                 {% if question_list, signup__data %}
                 <div id="con_list" class="con_list" style="overflow: hidden;">
@@ -14,34 +28,42 @@
                                 <div class="card">
                                     <div class="thumb">
                                         <a href="{{ url_for('question.detail', question_id=question.id) }}">
-                                            <img src="/static/image/{{question.id}}/{{question.img_name}}"
+                                            {% set display_image = "/static/image/" ~ question.id ~ "/" ~ question.img_name %}
+                                            {% if is_directory("pybo/static/image/" ~ (question.id|string) ~ "/" ~ (question.img_name|string)) %}
+                                            <!-- 230426 와 진짜 이 위의 유효한 디렉토리 만들어 내려고 4시간을 해맴.. 위처럼 써야합니다!!!!!!!!!! -->
+                                            {% set display_image = "/static/image/" ~ question.id ~ "/" ~ question.img_name %}
+                                            {% else %}
+                                            {% set display_image = "/static/image/main_01.jpg" %}
+                                            {% endif %}
+                                            <img src="{{ display_image }}"
                                                  width="308" height="308">
                                         </a>
                                     </div>
                                     <div style="clear: both;" class="conts-infos">
-                                        <h3><a href="{{ url_for('question.detail', question_id=question.id) }}">{{ question.subject }}</a></h3>
-                                        <!--    <a href="https://www.google.co.kr/maps/place/{{question.local}}">{{ question.local }}</a>-->
-                                        <p class="note_conts">{{question.content }}</p><a
+                                        <h3><a href="{{ url_for('question.detail', question_id=question.id) }}">{{ question.subject }}</a>
+                                            <a href="https://www.google.co.kr/maps/place/{{question.local}}">{{ question.local }}</a></h3>
+                                        <p class="note_conts">{{question.content|striptags}}</p><a
                                             href="{{ url_for('question.detail', question_id=question.id) }}"></a></h3>
                                         {% if question.answer_set|length > 0 %}
                                         {% endif %}
                                     </div>
                                     <div class="tp_cnt">
                                             <span class="likes"><img alt="좋아요"
-                                                                     src="{{ url_for('static', filename='image/icon-like-heart-off.png') }}">{{ question.answer_set|length }}</span>
+                                                                     src="{{ url_for('static', filename='image/icon-like-heart-off.png') }}">{{ question.voter|length }}</span>
                                         <span class="cmt"><img alt="댓글"
-                                                               src="{{ url_for('static', filename='image/icon-scomment.png') }}"> {{ question.answer_set|length }}</span>
+                                                               src="{{ url_for('static', filename='image/icon-scomment.png') }}">{{ question.answer_set|length }}</span>
                                         <li>
-                                            <a href="https://www.google.co.kr/maps/place/{{question.local}}">{{
-                                                question.local }}</a>
+                                            <a href="https://www.google.co.kr/maps/place/{{question.local}}">{{ question.local }}</a>
                                         </li>
                                     </div>
                                     <div class="user">
-                                        <img data-url="/bz17854" class="usr_img" alt="작성자 프로필 이미지"
-                                             src="https://img.tnote.kr/upload/user/1541753953467_t.jpg">
+                                        <img data-url="/bz17854" class="usr_img" alt="작성자 프로필 이미지" src="{{ url_for('static', filename='image/User.png') }}">
                                         <div class="user_info">
                                             <span class="usr_nm"></span>
                                             <span class="travel">{{ question.create_date|datetime }}</span>
+                                            <span class="travel">작성자 : {{ g.user.user_name}}</span>
+
+
                                         </div>
                                     </div>
                                 </div>

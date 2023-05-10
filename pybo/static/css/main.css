@@ -285,6 +285,8 @@ textarea {
     z-index: -1;
     transition: 0.3s all;
     opacity: 0;
+    border-bottom: 2px solid #e1e1e1;
+    background: white;
 }
 
 #header h1 {
@@ -300,6 +302,9 @@ textarea {
     height: 50px;
     background: url('../image/logo.png') no-repeat 50% 50% / 100% auto;
     transition: 0.3s all;
+}
+#header a:hover {
+    color:black;;
 }
 
 #header .inner {
@@ -356,8 +361,12 @@ body.fixed #header h1 a {
 }
 
 body.fixed #header .gnb ul li a {
-    color: black;
+    color: #c8c8c8;
     transition: color 0.2s ease-in-out;
+}
+
+body.fixed #header .gnb ul li a:hover {
+    color: black;
 }
 
 body.fixed #header .gnb ul li a:after {
@@ -791,7 +800,7 @@ h2.sec_tit.aos-init.aos-animate {
     width: 307px;
     height: 247px;
     padding: 35px 30px 38px;
-    /*background-color: #fff; 박스 색상*/
+    background-color: #fff;
 }
 
 .service_box .sv_tit {

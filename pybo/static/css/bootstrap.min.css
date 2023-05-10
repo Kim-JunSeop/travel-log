@@ -98,11 +98,13 @@ h5,
 h6 {
     margin-top: 0;
     margin-bottom: 0.5rem;
+
 }
 
 p {
     margin-top: 0;
     margin-bottom: 1rem;
+
 }
 
 abbr[data-original-title],
@@ -2993,7 +2995,7 @@ textarea.form-control.is-invalid {
 
 .btn:not(:disabled):not(.disabled) {
     cursor: pointer;
-    display: inline-block; margin: 0 5px;  float: right;
+    display: inline-block; margin: 0 1px;  float: right;
 }
 
 a.btn.disabled,
@@ -5378,7 +5380,7 @@ input[type="submit"].btn-block {
     word-wrap: break-word;
     background-color: #fff;
     background-clip: border-box;
-    border: 1px solid rgba(0, 0, 0, 0.125);
+    border: 2px solid rgba(0, 0, 0, 0.125);
     border-radius: 0.25rem;
 }
 
@@ -5422,6 +5424,7 @@ input[type="submit"].btn-block {
 
 .card-text:last-child {
     margin-bottom: 0;
+    margin-left: 7px;
 }
 
 .card-link:hover {
@@ -5893,7 +5896,7 @@ a.badge-danger:focus {
 
 .badge-light {
     color: #212529;
-    background-color: #f8f9fa;
+    /*background-color: #f8f9fa;*/
 }
 
 a.badge-light:focus,
@@ -7574,6 +7577,12 @@ button.bg-dark:hover {
 .cke_editor_editor .cke_contents{
     min-height:800px;
 }
+.container_id{
+    text-align: right;
+}
+.container_time{
+    text-align: right;
+}
 .summary_box .wrap textarea {
     width: 100%;
     resize: none;
@@ -7585,8 +7594,9 @@ button.bg-dark:hover {
     border-radius : 50px;
     /*border-width : thick;*/
     /*border-style : dashed;*/
-    text-align : center;
-    font-weight : bold;
+    text-align : left;
+    font-weight : light;
+    font-size: 20px;
     /*background-color : lightgreen;*/
 }
 .form-control3 {
@@ -7754,6 +7764,7 @@ button.bg-dark:hover {
 .d-flex {
     display: -ms-flexbox !important;
     display: flex !important;
+    flex-direction: column;
 }
 
 .d-inline-flex {
@@ -9182,10 +9193,12 @@ button.bg-dark:hover {
 .m-3 {
     margin: 1rem !important;
 }
-
+h1.blog_subject {
+    margin-top: 10%;
+}
 .mt-3,
 .my-3 {
-    margin-top: 5rem !important;
+    margin-top: 2rem !important;
 }
 
 .mr-3,

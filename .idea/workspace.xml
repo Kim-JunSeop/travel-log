@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e50e83cd-d74d-482a-b6b8-fd4d35492efb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/pybo/templates/friends/find_friends.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pybo/views/friends_views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/qaplug_profiles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/123cbb0d842517cd37196183f3f6583af85acc9d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/d/1d5e98f855877457efdcea5bdbf1b44bb25f16f9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/9/29123ca3e388aa356c9a72c1ce5222b26f89f2bd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/0/3017ee1e703dd23bbd7f35c074a245bad1a13652" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/2/3250584981427a318e4884751d6907224d529e80" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/4/34a0d39556543d6660d3588d79b127d3f525cea3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/443bc8c99981911e2328fa821487c08762279ba6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/b/5b89a55c09e0239e208c90ef1341f2d95d8c22d8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/f/5f6dec980939bb05b8a70106ba540124d655dc49" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/3/6363203731e53d99f7f2e253f95ee1f8aa0cec00" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/3/63ab782c5b5b49b2e89ec0300fc0e2f1f4293cb1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/5/6546472f138ef2e09f0d047d4ad7f2980e0a04bc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/5/658e474937c9063c8617a3f236c5a4348bf0abd7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/b/6b7b448a563cbc84164d4067457c27ef824da5fa" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/6/761f0c32a61423a2113e39771a543cf3fe88a218" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/d/7d5b78b994104c4e276211757b1b72914cbc301e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/4/849fd518c52e559f0fce2ca7e7dd285edd7bf2d3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/f/8ff8cf5df1c9af21c4ce9b9f3c484ef7db1f1872" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/1/91bc05e49f403e5c0a55b7cbf2a51b1a9648edec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/d/9dd60817a74ec5865af8632f37e1c8c8a8c705dd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/e/9ee3ef4e92806b4abdd33604bb9b3450d7ac51f8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/6/a622bda62e64029373f644ba6280c3ce9f1b3557" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/9/a915fa2914e78767f791ab4222d987e921f18295" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/c/ac8f93a4c50264001f8f794e8edab3349169ad1e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/2/c2284da0ae94c41744ca84823321f7a05b1127ce" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/7/c71bf14791c34ed2ff210258b419700f6b7a6960" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/9/c9c21944d37d53307d225952e17320a0cf687e31" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/a/ca1d77e15909d3066e0e5c0c6382d6e95734dc0d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/0/f0fb5c282d21e2582e8c69bcbcc7bfbdd4d3e93d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/b/fb3c64354649552a29e53bf787ec6442ed7659ed" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webproject.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mydata2.db" beforeDir="false" afterPath="$PROJECT_DIR$/mydata2.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/.babelrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/.envrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/.eslintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/.github/CODE_OF_CONDUCT.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/.github/CONTRIBUTING.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/.github/FUNDING.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/.github/ISSUE_TEMPLATE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/.github/PULL_REQUEST_TEMPLATE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/.github/workflows/codeql-analysis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/.husky/pre-commit" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/.husky/pre-push" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/.karma/config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/.karma/debug.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/.karma/saucelabs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/.karma/travis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/CHANGES.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/config/build-fonts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/config/common.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/config/webpack.development.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/config/webpack.karma.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/config/webpack.production.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/examples/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/examples/airmode.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/examples/codemirror.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/examples/custom-style.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/examples/example.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/examples/external-api.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/examples/external-codemirror.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/examples/hint-emoji.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/examples/hint-math.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/examples/hint-userdefine.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/examples/hint-words.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/examples/history-limit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/examples/index.template" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/examples/jquery-custom-event.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/examples/lang.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/examples/link-blank.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/examples/mode-switcher.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/examples/ondialog-multitab.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/examples/ondialog.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/examples/placeholder.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/examples/plugin-hello.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/examples/recordEveryKeyStroke.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/examples/symbols_mathematical-symbols_Greek-letters.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/examples/textarea.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/examples/toolbar-container.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/examples/with-google-font.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/plugin/databasic/summernote-ext-databasic.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/plugin/databasic/summernote-ext-databasic.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/plugin/hello/summernote-ext-hello.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/plugin/specialchars/summernote-ext-specialchars.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/align-center.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/align-indent.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/align-justify.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/align-left.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/align-outdent.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/align-right.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/align.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/arrow-circle-down.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/arrow-circle-left.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/arrow-circle-right.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/arrow-circle-up.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/arrows-alt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/arrows-h.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/arrows-v.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/bold.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/caret.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/chain-broken.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/circle.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/close.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/code.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/col-after.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/col-before.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/col-remove.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/eraser.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/float-left.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/float-none.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/float-right.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/font.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/frame.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/italic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/link.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/magic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/menu-check.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/minus.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/orderedlist.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/pencil.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/picture.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/question.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/redo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/rollback.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/row-above.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/row-below.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/row-remove.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/special-character.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/square.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/strikethrough.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/subscript.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/summernote.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/superscript.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/table.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/text-height.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/trash.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/underline.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/undo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/unorderedlist.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/icons/video.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/summernote.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/summernote.hash" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/summernote.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/summernote.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/summernote.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/font/template.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/js/Context.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/js/core/async.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/js/core/dom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/js/core/env.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/js/core/func.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/js/core/key.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/js/core/lists.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/js/core/range.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/js/editing/Bullet.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/js/editing/History.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/js/editing/Style.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/js/editing/Table.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/js/editing/Typing.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/js/module/AirPopover.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/js/module/AutoLink.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/js/module/AutoReplace.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/js/module/AutoSync.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/js/module/Buttons.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/js/module/Clipboard.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/js/module/Codeview.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/js/module/Dropzone.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/js/module/Editor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/js/module/Fullscreen.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/js/module/Handle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/js/module/HelpDialog.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/js/module/HintPopover.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/js/module/ImageDialog.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/js/module/ImagePopover.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/js/module/LinkDialog.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/js/module/LinkPopover.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/js/module/Placeholder.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/js/module/Statusbar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/js/module/TablePopover.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/js/module/Toolbar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/js/module/VideoDialog.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/js/renderer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/js/settings.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/js/summernote.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-ar-AR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-az-AZ.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-bg-BG.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-bn-BD.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-ca-ES.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-cs-CZ.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-da-DK.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-de-CH.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-de-DE.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-el-GR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-en-US.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-es-ES.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-es-EU.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-fa-IR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-fi-FI.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-fr-FR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-gl-ES.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-he-IL.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-hr-HR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-hu-HU.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-id-ID.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-it-IT.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-ja-JP.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-ko-KR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-lt-LT.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-lt-LV.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-mn-MN.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-nb-NO.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-nl-NL.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-pl-PL.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-pt-BR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-pt-PT.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-ro-RO.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-ru-RU.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-sk-SK.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-sl-SI.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-sr-RS-Latin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-sr-RS.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-sv-SE.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-ta-IN.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-th-TH.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-tr-TR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-uk-UA.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-uz-UZ.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-vi-VN.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-zh-CN.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/lang/summernote-zh-TW.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/styles/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/styles/bs3/summernote-bs3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/styles/bs3/summernote-bs3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/styles/bs3/summernote-bs3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/styles/bs3/summernote-bs3.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/styles/bs4/summernote-bs4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/styles/bs4/summernote-bs4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/styles/bs4/summernote-bs4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/styles/bs4/summernote-bs4.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/styles/bs5/summernote-bs5.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/styles/bs5/summernote-bs5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/styles/bs5/summernote-bs5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/styles/bs5/summernote-bs5.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/styles/lite/js/DropdownUI.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/styles/lite/js/ModalUI.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/styles/lite/js/TooltipUI.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/styles/lite/scss/btn-group.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/styles/lite/scss/buttons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/styles/lite/scss/common.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/styles/lite/scss/dropdown.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/styles/lite/scss/form.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/styles/lite/scss/mixins.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/styles/lite/scss/mixins/buttons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/styles/lite/scss/modal.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/styles/lite/scss/popover.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/styles/lite/scss/toolbar.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/styles/lite/scss/tooltip.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/styles/lite/scss/variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/styles/lite/summernote-lite.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/styles/lite/summernote-lite.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/styles/lite/summernote-lite.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/styles/lite/summernote-lite.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/styles/summernote/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/styles/summernote/common.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/styles/summernote/elements.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/styles/summernote/font.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/styles/summernote/font/summernote.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/styles/summernote/font/summernote.hash" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/styles/summernote/font/summernote.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/styles/summernote/font/summernote.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/summernote/src/styles/summernote/font/summernote.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/static/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/static/css/chatbot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/static/css/nav.css" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/css/nav.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/static/css/normalize.css" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/css/normalize.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/static/css/tonte.css" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/css/tonte.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/static/image/intro.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/static/image/triplogo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/static/js/chatbot.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/static/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/templates/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/templates/question/question_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/templates/question/question_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/templates/question/question_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/templates/question/question_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/templates/question/question_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/templates/question/question_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/views/openai_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/views/openai_views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/views/route_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/views/route_views.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2PE7lDGOQhpUFFNGp8tqDngb0kh" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="travel-log" type="PythonConfigurationType" factoryName="Python">
+      <module name="travel-log" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pybo/__init__.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e50e83cd-d74d-482a-b6b8-fd4d35492efb" name="Changes" comment="" />
+      <created>1683010541153</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1683010541153</updated>
+      <workItem from="1683010542581" duration="1771000" />
+      <workItem from="1683024308249" duration="2542000" />
+      <workItem from="1683090273534" duration="2649000" />
+      <workItem from="1683355429916" duration="507000" />
+      <workItem from="1683702837376" duration="8593000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
