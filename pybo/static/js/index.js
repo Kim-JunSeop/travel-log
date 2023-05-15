@@ -19,28 +19,46 @@ async function fetchMarkers() {
     return markers;
 }
 
-let allMarkers = []; // 전체 마커를 저장할 배열
-let friends = []; // 팔로우한 친구 목록을 저장할 배열
-
 async function fetchFriends() {
     const response2 = await fetch('/route/get_friends');
-    const friendList = await response2.json();
-    return friendList;
+    const friendsList = await response2.json();
+    return friendsList;
 }
 
+async function fetchMarkers2() {
+    const response = await fetch('/route/get_markers2');
+    const addedMarkers = await response.json();
+    return addedMarkers;
+}
+
+let allMarkers = []; // 전체 마커를 저장할 배열
+let allMarkers2 = [];
+let friends = []; // 팔로우한 친구 목록을 저장할 배열
+let myIDval;
+
+async function fetchMyID() {
+    const response = await fetch('/route/get_my_id');
+    const myID = await response.json();
+    return myID;
+}
+
+
 // 3단계: 인포윈도우 구현하기(커스텀 오버레이로)
-async function createCustomOverlay(markerData) {
+async function createCustomOverlay(markerData, isMarker2) {
 
     //해당 이미지가 그 위치에 있는지에 대한 검증입니다. utils.py 참고
-    var imageSrc0 = `/static/image/${markerData.id}/${markerData.img_name}`;
-    const isValidPath = await is_directory(imageSrc0);
-    if (!isValidPath) {
-      imageSrc0 = "/static/image/main_01.jpg";
+    var imageSrc0;
+    if (isMarker2==true) {
+        imageSrc0 = `/static/image/marker2_images/${markerData.img_name}`;
+    } else {
+        imageSrc0 = `/static/image/${markerData.id}/${markerData.img_name}`;
     }
 
-    //검증된 imageSrc0엔 대표이미지있는 경로와 없는 경로 두개가 들어가있습니다.
-    //옆으로 슬라이딩 할 수 있고 없고는 html코드에 주석처리된 부분입니다. 230426)일단 기능구현은 안함.
-    //아래 a href부분도 차후에 경로 수정해야함.
+    const isValidPath = await is_directory(imageSrc0);
+    if (!isValidPath) {
+        imageSrc0 = "/static/image/main_01.jpg";
+    }
+
     const content = `
         <div class="custom-overlay">
             <div class="info-window">
@@ -58,17 +76,18 @@ async function createCustomOverlay(markerData) {
         </div>
     `;
 
-    //인포윈도우 객체를 만듭니다. (얘는 함수가 호출되면 구현되야함)
+    const [latitude, longitude] = markerData.local.split(',').map(Number);
+    let positionWhenOverlay = new kakao.maps.LatLng(latitude, longitude);
+
     const customOverlay = new kakao.maps.CustomOverlay({
         content: content,
         map: null,
-        position: new kakao.maps.LatLng(markerData.local.split(',')[0], markerData.local.split(',')[1]),
+        position: positionWhenOverlay,
         xAnchor: 0.5,
         yAnchor: 1.5,
         zIndex: 10
     });
 
-    //인포윈도우에 들어가는 좌우 버튼을 구현합니다.
     const leftButton = customOverlay.a.querySelector('.left');
     const rightButton = customOverlay.a.querySelector('.right');
     const images = customOverlay.a.querySelectorAll('img');
@@ -91,16 +110,15 @@ async function createCustomOverlay(markerData) {
 
 
 
-
 //해당 이미지가 그 위치에 있는지에 대한 검증입니다. utils.py 참고 (얘는 js용임)
 async function is_directory(path) {
     try {
-      const response = await fetch(path, { method: 'HEAD' });
-      return response.ok;
+        const response = await fetch(path, { method: 'HEAD' });
+        return response.ok;
     } catch (error) {
-      return false;
+        return false;
     }
-  }
+}
 
 // 4단계: 마커 구현인데, 얘는 로그인이 되어야 하기때문에, isloggedin 매개변수를 기본으로 가져감
 async function displayMarkers() {
@@ -111,7 +129,10 @@ async function displayMarkers() {
     //아까 2단계의 마커에 대한 함수를 구현함. markers엔 json형식으로 되어있는 게시물의 대한 정보가 들어감. 이걸 마커에 넣어줄거임
     const markers = await fetchMarkers();
     const friendList = await fetchFriends();
-    friends = friendList.map(friend => friend.user_name);
+    const addedMarkers = await fetchMarkers2(); //marker 2
+    friends = friendList.map(friend => friend.user_id);
+    const friendsMarkers = markers.filter(marker => friends.includes(marker.user_id));
+    myIDval = await fetchMyID();
 
     //각각의 마커의 정보에 대해서.
     //마커의 정보!
@@ -127,7 +148,7 @@ async function displayMarkers() {
         markers.map(async (marker) => {
             const localArray = marker.local.split(',');
             const position = new kakao.maps.LatLng(localArray[0], localArray[1]);
-    
+
             var imageSrc1 = `/static/image/${marker.id}/${marker.img_name}`;
             if (!(await is_directory(imageSrc1))) {
                 imageSrc1 = '/static/image/main_01.jpg';
@@ -139,24 +160,24 @@ async function displayMarkers() {
                 imageSize,
                 imageOption
             );
-    
+
             const newMarker = new kakao.maps.Marker({
                 map: map,
                 position: position,
                 image: markerImage,
             });
-    
-            const customOverlay = await createCustomOverlay(marker);
-    
+
+            const customOverlay = await createCustomOverlay(marker, false);
+
             kakao.maps.event.addListener(newMarker, 'click', function () {
                 customOverlay.setMap(map);
             });
-    
+
             const closeButton = customOverlay.a.querySelector('.infoClose');
             closeButton.addEventListener('click', () => {
                 customOverlay.setMap(null);
             });
-    
+
             allMarkers.push({
                 userId: marker.user_id,
                 marker: newMarker,
@@ -164,14 +185,55 @@ async function displayMarkers() {
             });
         })
     );
+    await Promise.all(
+        addedMarkers.map(async (marker2) => {
+            const localArray = marker2.local.split(',');
+            const position2 = new kakao.maps.LatLng(localArray[0], localArray[1]);
+
+            var imageSrc2 = `/static/image/marker2_images/${marker2.img_name}`;
+            if (!(await is_directory(imageSrc2))) {
+                imageSrc2 = '/static/image/main_01.jpg';
+            }
+            var imageSize2 = new kakao.maps.Size(64, 69);
+            var imageOption2 = { offset: new kakao.maps.Point(27, 69) };
+            var markerImage2 = new kakao.maps.MarkerImage(
+                imageSrc2,
+                imageSize2,
+                imageOption2
+            );
+
+            const newMarker2 = new kakao.maps.Marker({
+                map: map,
+                position: position2,
+                image: markerImage2,
+            });
+
+            const customOverlay = await createCustomOverlay(marker2, true);
+
+            kakao.maps.event.addListener(newMarker2, 'click', function () {
+                customOverlay.setMap(map);
+            });
+
+            const closeButton = customOverlay.a.querySelector('.infoClose');
+            closeButton.addEventListener('click', () => {
+                customOverlay.setMap(null);
+            });
+
+            allMarkers.push({
+                userId: marker2.user_id,
+                marker: newMarker2,
+                overlay: customOverlay,
+            });
+        })
+    );
+
     updateMarkerVisibility();
 }
-    
 
 function updateMarkerVisibility() {
     const selectedFilter = document.querySelector('input[name="markerFilter"]:checked').value;
     allMarkers.forEach(markerObj => {
-        const isMyMarker = markerObj.userId === userId;
+        const isMyMarker = markerObj.userId === myIDval;
         const isFriendsMarker = friends.includes(markerObj.userId);
         const isNotMyMarker = !isMyMarker && !isFriendsMarker;
 
@@ -179,8 +241,8 @@ function updateMarkerVisibility() {
 
         if (isLoggedIn) {
             showMarker = (selectedFilter === 'myMarkers' && isMyMarker) ||
-                         (selectedFilter === 'friendsMarkers' && isFriendsMarker) ||
-                         (selectedFilter === 'allMarkers');
+                (selectedFilter === 'friendsMarkers' && isFriendsMarker) ||
+                (selectedFilter === 'allMarkers');
         } else {
             showMarker = (selectedFilter === 'allMarkers');
         }
@@ -190,6 +252,24 @@ function updateMarkerVisibility() {
         } else {
             markerObj.marker.setMap(null);
             markerObj.overlay.setMap(null);
+        }
+    });
+
+    // addedMarkers에 대한 처리
+    allMarkers2.forEach(markerObj => {
+        const isMyMarker = markerObj.userId2 === myIDval;
+
+        let showMarker = false;
+
+        if (isLoggedIn) {
+            showMarker = (selectedFilter === 'myMarkers' && isMyMarker);
+        }
+
+        if (showMarker) {
+            markerObj.marker2.setMap(map);
+        } else {
+            markerObj.marker2.setMap(null);
+            markerObj.overlay2.setMap(null);
         }
     });
 }
@@ -210,3 +290,53 @@ function closeOverlay(){
     customOverlay.setMap(null);
 }
 
+
+//아래는 좌클릭으로 생성된 마커에 대한 정의내용입니다.
+function addMarker(position) {
+    var marker2 = new kakao.maps.Marker({
+        position: position
+    });
+    marker2.setMap(map);
+    // 마커를 생성합니다
+    kakao.maps.event.addListener(marker2, 'click', function() {
+        $('#myModal').modal('show');
+    });
+
+    $('#markerForm').on('submit', function(e) {
+        e.preventDefault();
+
+        var title = $('#title').val();
+        var content = $('#content').val();
+        var image = $('#image')[0].files[0];
+
+        var formData = new FormData(this);
+        formData.append('user_id', myIDval); // Replace with actual user_id value
+        formData.append('latitude', marker2.getPosition().getLat());
+        formData.append('longitude', marker2.getPosition().getLng());
+        formData.append('title', title);
+        formData.append('content', content);
+        formData.append('img_name', image); // If you're not uploading a file, remove this line
+
+        $.ajax({
+            url: '/route/add_marker',  // Replace with server's URL
+            method: 'POST',
+            data: formData,
+            contentType: false,
+            processData: false,
+            success: function(data) {
+                console.log('서버로 전송완료')
+            }
+            // var infowindow = new kakao.maps.InfoWindow({ /* options */ });
+        });
+        $('#myModal').modal('hide');
+
+        // 마우스 오른쪽 클릭시 마커를 제거하는 이벤트를 등록합니다
+        kakao.maps.event.addListener(marker2, 'rightclick', function() {
+            marker2.setMap(null);
+        });
+    });
+}
+kakao.maps.event.addListener(map, 'click', function(mouseEvent) {
+    // 클릭한 위치에 마커를 표시합니다
+    addMarker(mouseEvent.latLng);
+});

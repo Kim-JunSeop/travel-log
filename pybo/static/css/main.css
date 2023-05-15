@@ -5,7 +5,7 @@
     font-weight: 300;
     font-display: swap;
     src: local('Noto Sans Kr'), local('Noto Sans Kr');
-    src: url(../fonts/NotoSansKR-Light.woff2) format('woff2'), url(../fonts/NotoSansKr-Light.woff) format('woff');
+    src: url(../fonts/NEXONLv1GothicLight.ttf) format('woff2'), url(../fonts/NEXONLv1GothicLight.ttf) format('woff');
 
 
 }
@@ -16,7 +16,7 @@
     font-weight: 400;
     font-display: swap;
     src: local('Noto Sans Kr'), local('Noto Sans Kr');
-    src: url(../fonts/NotoSansKR-Regular.woff2) format('woff2'), url(../fonts/NotoSansKR-Regular.woff) format('woff');
+    src: url(../fonts/NEXONLv1GothicRegular.ttf) format('woff2'), url(../fonts/NEXONLv1GothicRegular.ttf) format('woff');
     text-rendering: optimizeLegibility;
 }
 
@@ -26,7 +26,7 @@
     font-weight: 500;
     font-display: swap;
     src: local('Noto Sans Kr'), local('Noto Sans Kr');
-    src: url(../fonts/NotoSansKR-Medium.woff2) format('woff2'), url(../fonts/NotoSansKR-Medium.woff) format('woff');
+    src: url(../fonts/NEXONLv1GothicRegular.ttf) format('woff2'), url(../fonts/NEXONLv1GothicRegular.ttf) format('woff');
     text-rendering: optimizeLegibility;
 }
 
@@ -36,7 +36,7 @@
     font-weight: 700;
     font-display: swap;
     src: local('Noto Sans Kr'), local('Noto Sans Kr');
-    src: url(../fonts/NotoSansKR-Bold.woff2) format('woff2'), url(../fonts/NotoSansKR-Bold.woff) format('woff');
+    src: url(../fonts/NEXONLv1GothicBold.ttf) format('woff2'), url(../fonts/NEXONLv1GothicBold.ttf) format('woff');
     text-rendering: optimizeLegibility;
 }
 
@@ -46,7 +46,7 @@
     font-weight: 900;
     font-display: swap;
     src: local('Noto Sans Kr'), local('Noto Sans Kr');
-    src: url(../fonts/NotoSansKR-Black.woff2) format('woff2'), url(../fonts/NotoSansKR-Black.woff) format('woff');
+    src: url(../fonts/NEXONLv1GothicBold.ttf) format('woff2'), url(../fonts/NEXONLv1GothicBold.ttf) format('woff');
     text-rendering: optimizeLegibility;
 }
 
@@ -145,7 +145,27 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+.slider_item {
+    display: flex;
 
+}
+
+.content {
+    flex: 1;
+}
+
+.image-container {
+    flex: 1;
+    text-align: right;
+}
+
+.slider_radius {
+    margin-left: 20px;
+}
+
+.slider_radius img {
+    max-width: 100%;
+}
 caption {
     font-size: 0;
     line-height: 0;
@@ -507,7 +527,9 @@ body.fixed #header .gnb ul li.active a:after {
 h2.sec_tit.aos-init.aos-animate {
     color: black;
     display: inline;
+
 }
+
 .sec_desc {
     margin-top: 42px;
     font-size: 18px;
@@ -516,7 +538,15 @@ h2.sec_tit.aos-init.aos-animate {
     color: #878787;
     word-break: keep-all;
 }
-
+.feature1 p{
+    display: inline;
+}
+.feature2 p{
+    display: inline;
+}
+.feature3 p{
+    display: inline;
+}
 .text_white .sec_tit,
 .text_white .sec_desc {
     color: currentColor;
@@ -608,12 +638,14 @@ h2.sec_tit.aos-init.aos-animate {
 .btn_anchor {
     position: relative;
     display: inline-block;
-    color: #ea3062;
+    color: #86b8fc;
     font-size: 18px;
     font-weight: 700;
     line-height: 1.2;
 }
-
+.btn_anchor:hover{
+    color: #3288FF;
+}
 .btn_anchor:after {
     position: absolute;
     bottom: -4px;
@@ -653,7 +685,7 @@ h2.sec_tit.aos-init.aos-animate {
     flex: 1;
     margin-right: 1px;
     font-size: 20px;
-    text-align: center;
+
     color: #cfcfcf;
 }
 
@@ -721,7 +753,7 @@ h2.sec_tit.aos-init.aos-animate {
 }
 
 .swiper-pagination-bullet-active {
-    background-color: #ea3062;
+    background-color: #3288FF;
 }
 
 /* sec01 데이터를 기반한 생활 중심의 보험 서비스 제공 */
@@ -1000,12 +1032,12 @@ h2.sec_tit.aos-init.aos-animate {
 }
 
 .cate_slider_section .swiper-button-next {
-    left: 400px;
+    left: 1400px;
 }
 
 .cate_slider_wrap {
     overflow: hidden;
-    border-radius: 40px;
+
 }
 
 .cate_slider .slider_item {
@@ -1811,8 +1843,8 @@ h2.sec_tit.aos-init.aos-animate {
 }
 
 /* @media all and (max-width:1440px) {
-	.service_list_section .nav_arrow.swiper-button-next {right: 0;}
-	.service_list_section .nav_arrow.swiper-button-prev {left: 0;}
+   .service_list_section .nav_arrow.swiper-button-next {right: 0;}
+   .service_list_section .nav_arrow.swiper-button-prev {left: 0;}
 } */
 
 @media all and (max-width: 1079px) {

@@ -4,8 +4,8 @@
 	padding:10px 0 0 0;
 }
 
-#list{	
-    margin-top: 18px;
+#list{
+	margin-top: 2%;
 }
 
 #con_list {
@@ -81,6 +81,7 @@
 	background-color:#fff;
 	font-size:0px;
 	border-radius: 0.2777777777777778VW;
+	border: 2px solid #e1e1e1;
 	/* margin-bottom: 2.5VW; */
 	/* -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.33);
 	-moz-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.33);

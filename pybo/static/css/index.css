@@ -9,14 +9,14 @@
 
 @font-face {
     font-family: 'MaplestoryOTFLight';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFLight.woff') format('woff');
-    font-weight: normal;
+    src: url(../fonts/NEXONLv1GothicRegular.ttf) format('woff');
+    font-weight: 400;
     font-style: normal;
 }
 
 body {
     font-family: 'BMJUA';
-    background: #F0F8FF;
+    background: white;
 }
 ::-webkit-scrollbar {
     display: none;
@@ -131,12 +131,36 @@ img.image-preview {
     background: white;
     width: 25%;
     max-width: 250px;
-    height: 615px;
+    height: 480px;
     border-radius: 10px;
     box-shadow: 1px 1px 2px 3px rgba(0, 0, 0, 0.1);
 
 }
-
+.filter-section {
+    padding: 15px 10px;
+}
+.filter-section input[type=radio]{
+    display: none;
+}
+.filter-section input[type=radio]+label{
+    display: inline-block;
+    cursor: pointer;
+    height: 24px;
+    width: 235px;
+    border: 1px solid #333;
+    line-height: 24px;
+    text-align: center;
+    font-weight:bold;
+    font-size:13px;
+}
+.filter-section input[type=radio]+label{
+    background-color: #fff;
+    color: #333;
+}
+.filter-section input[type=radio]:checked+label{
+    background-color: #333;
+    color: #fff;
+}
 .myprofile {
     margin: 35px 15px;
     text-align: center;
@@ -293,7 +317,7 @@ img.image-preview {
 
 .secondsection {
     position: relative;
-    background: #F0F8FF;
+    background: white;
     left: 20%;
     margin-top: -40%;
 }

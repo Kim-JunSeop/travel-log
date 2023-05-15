@@ -5,16 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <title>Travelog</title>
+    <title>Travel-log</title>
 
     <link rel="icon" href="{{ url_for('static', filename='favicon (2).ico') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/aos.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/swiper.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
 
     <script src="{{ url_for('static', filename='js/jquery-1.11.3.min.js') }}"></script>
@@ -38,7 +34,7 @@
                     <li><a href="/question/list">블로그</a></li>
                     <li><a href="/input">나만의 지도</a></li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="{{ url_for('main.logout') }}">{{ g.user.user_name }} (Loginout)</a>
+                        <a class="nav-link" href="{{ url_for('main.logout') }}">{{ g.user.user_name }} 님 (로그아웃)</a>
                     </li>
                 </ul>
             {% else %}
@@ -46,8 +42,8 @@
                     <li><a href='/friends/find_friends'>친구찾기</a></li>
                     <li><a href="/question/list">블로그</a></li>
                     <li><a href="/input">나만의 지도</a></li>
-                    <li><a href="/login">Login</a></li>
-                    <li><a href=/signup>SignUp</a></li>
+                    <li><a href="/login">로그인</a></li>
+                    <li><a href=/signup>회원가입</a></li>
                 </ul>
             {% endif %}
         </div>
@@ -71,64 +67,125 @@
     </div>
     <div class="sec sec04 sec_program03">
         <div class="sec_inner">
-{#            <div class="text_area">#}
-{#                <h2 class="sec_tit aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">블로그</h2>#}
-{#                <p class="sec_desc aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">#}
-{#                    여행기록을 <br class="mo_block">블로그에 남겨보아요<br>#}
-{#                </p>#}
-{#            </div>#}
-
             <!-- slider -->
             <div class="cate_slider_section aos-init aos-animate" data-aos="fade-left" data-aos-duration="1000">
                 <div class="cate_slider_wrap">
                     <div class="cate_slider swiper swiper-container-initialized swiper-container-horizontal">
                         <div class="swiper-wrapper"
-                             style="transition-duration: 300ms; transform: translate3d(-4000px, 0px, 0px);">
+                             style="transition-duration: 3300ms; transform: translate3d(-930px, 0px, 0px);">
                             <div class="slider_item swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
-                                 data-swiper-slide-index="2" style="width: 1440px;">
+                                 data-swiper-slide-index="2" style="width: 310px;">
                                 <h2 class="sec_tit aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">1</h2>
                                 <p class="sec_desc aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
                                     여행기록을 <br class="mo_block">블로그에 남겨보아요<br>
                                 </p>
                                 <div class="slider_radius">
-                                    <img src="{{ url_for('static', filename='image/1.png') }}" alt="slide 3">
+                                    <img class="slide img" src="{{ url_for('static', filename='image/1.png') }}" alt="slide 3">
                                 </div>
                             </div>
                             <div class="slider_item swiper-slide swiper-slide-duplicate-next"
-                                 data-swiper-slide-index="0" style="width: 1440px;">
-                                <h2 class="sec_tit aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">1</h2>
+                                 data-swiper-slide-index="0" style="width: 310px;">
+                                <h2 class="sec_tit aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">블로그</h2>
                                 <p class="sec_desc aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
-                                    여행기록을 <br class="mo_block">블로그에 남겨보아요<br>
+                                    여행블로그인 트레블로그에  <br class="mo_block">기록을 남겨보세요<br>
                                 </p>
-
+                                <ul class="block">
+                                    <li>
+                                        <div class="feature1">
+                                            <p>
+                                                여행 블로그에 최적화된 Travel-log
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="feature2">
+                                            <p>
+                                                친구들과 함께 블로그에 여행기록을 작성해보세요
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="feature3">
+                                            <p>
+                                                블로그 특징3
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
                                 <div class="slider_radius">
-                                    <img src="{{ url_for('static', filename='image/2.png') }}" alt="slide 1">
+                                    <img class="slide img" src="{{ url_for('static', filename='image/2.png') }}" alt="slide 1">
                                 </div>
                             </div>
                             <div class="slider_item swiper-slide swiper-slide-prev" data-swiper-slide-index="1"
-                                 style="width: 1440px;">
-                                <h2 class="sec_tit aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">2</h2>
+                                 style="width: 310px;">
+                                <h2 class="sec_tit aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">Map</h2>
                                 <p class="sec_desc aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
-                                    여행기록을 <br class="mo_block">블로그에 남겨보아요<br>
+                                    지도를 활용해서<br class="mo_block">나만의 지도를 만들어 보세요<br>
                                 </p>
+                                <ul class="block">
+                                    <li>
+                                        <div class="feature1">
+                                            <p>
+                                                여행 블로그에 최적화된 Travel-log
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="feature2">
+                                            <p>
+                                                친구들과 함께 블로그에 여행기록을 작성해보세요
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="feature3">
+                                            <p>
+                                                블로그 특징3
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
                                 <div class="slider_radius">
-                                    <img src="{{ url_for('static', filename='image/3.png') }}" alt="slide 2">
+                                    <img class="slide img" src="{{ url_for('static', filename='image/3.png') }}" alt="slide 2">
                                 </div>
                             </div>
                             <div class="slider_item swiper-slide swiper-slide-active" data-swiper-slide-index="2"
-                                 style="width: 1440px;">
-                                <h2 class="sec_tit aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">3</h2>
+                                 style="width: 310px;">
+                                <h2 class="sec_tit aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">Chat Gpt</h2>
                                 <p class="sec_desc aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
-                                    여행기록을 <br class="mo_block">블로그에 남겨보아요<br>
+                                    Chat Gpt를 활용해서<br class="mo_block">인공지능 서비스를 사용해보세요<br>
                                 </p>
+                                <ul class="block">
+                                    <li>
+                                        <div class="feature1">
+                                            <p>
+                                                여행 블로그에 최적화된 Travel-log
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="feature2">
+                                            <p>
+                                                친구들과 함께 블로그에 여행기록을 작성해보세요
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="feature3">
+                                            <p>
+                                                블로그 특징3
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
                                 <div class="slider_radius">
-                                    <img src="{{ url_for('static', filename='image/1.png') }}" alt="slide 3">
+                                    <img class="slide img" src="{{ url_for('static', filename='image/1.png') }}" alt="slide 3">
                                 </div>
                             </div>
                             <div class="slider_item swiper-slide swiper-slide-duplicate swiper-slide-next"
-                                 data-swiper-slide-index="0" style="width: 1440px;">
+                                 data-swiper-slide-index="0" style="width: 310px;">
                                 <div class="slider_radius">
-                                    <img src="{{ url_for('static', filename='image/2.png') }}" alt="slide 1">
+                                    <img class="slide img" src="{{ url_for('static', filename='image/2.png') }}" alt="slide 1">
                                 </div>
                             </div>
                         </div>
@@ -136,40 +193,15 @@
                 </div>
                 <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span
                         class="swiper-pagination-bullet" tabindex="0" role="button"
-                        aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet" tabindex="0"
-                                                                role="button" aria-label="Go to slide 2"></span><span
+                        aria-label="Go to slide 1"></span><span
+                        class="swiper-pagination-bullet" tabindex="0" role="button"
+                        aria-label="Go to slide 2"></span><span
                         class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button"
                         aria-label="Go to slide 3"></span></div>
                 <div class="swiper-button-prev nav_arrow" tabindex="0" role="button" aria-label="Previous slide"></div>
                 <div class="swiper-button-next nav_arrow" tabindex="0" role="button" aria-label="Next slide"></div>
             </div>
             <!--// slider -->
-
-            <div class="cate_tabs aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
-{#                <ul class="block">#}
-{#                    <li>#}
-{#                        <div class="feature1">#}
-{#                            <p>#}
-{#                                여행 블로그에 최적화된 Travel-log#}
-{#                            </p>#}
-{#                        </div>#}
-{#                    </li>#}
-{#                    <li>#}
-{#                        <div class="feature2">#}
-{#                            <p>#}
-{#                                친구들과 함께 블로그에 여행기록을 작성해보세요#}
-{#                            </p>#}
-{#                        </div>#}
-{#                    </li>#}
-{#                    <li>#}
-{#                        <div class="feature3">#}
-{#                            <p>#}
-{#                                블로그 특징3#}
-{#                            </p>#}
-{#                        </div>#}
-{#                    </li>#}
-{#                </ul>#}
-            </div>
         </div>
     </div>
     <div class="sec sec01 sec_life">
@@ -189,6 +221,7 @@
                         <div class="service_item swiper-slide swiper-slide-active now-show">
                             <div class="service_box">
                                 <strong class="sv_tit">Blog</strong>
+                                <br>
                                 <p class="sv_cont">다녀왔던 지역의 사진과 여행기만 추려서 여행을 추억할 수 있습니다</p>
                                 <a href="/question/list" class="btn_anchor">Blog</a>
                             </div>
@@ -222,6 +255,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span
                             class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button"
                             aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet" tabindex="0"
@@ -229,10 +263,10 @@
                                                                     aria-label="Go to slide 2"></span><span
                             class="swiper-pagination-bullet" tabindex="0" role="button"
                             aria-label="Go to slide 3"></span></div>
-                    <div class="swiper-button-prev nav_arrow swiper-button-disabled" tabindex="0" role="button"
-                         aria-label="Previous slide" aria-disabled="true"></div>
-                    <div class="swiper-button-next nav_arrow" tabindex="0" role="button" aria-label="Next slide"
-                         aria-disabled="false"></div>
+<!--                    <div class="swiper-button-prev nav_arrow swiper-button-disabled" tabindex="0" role="button"-->
+<!--                         aria-label="Previous slide" aria-disabled="true"></div>-->
+<!--                    <div class="swiper-button-next nav_arrow" tabindex="0" role="button" aria-label="Next slide"-->
+<!--                         aria-disabled="false"></div>-->
                     <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
                 <!--// service -->
             </div>
@@ -246,7 +280,7 @@
                     <h2 class="sec_tit aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">광고없이 <br>직접 여행한
                         후기</h2>
                     <p class="sec_desc aos-init" data-aos="fade-up" data-aos-duration="1000">
-                        여행을 떠나야 하는데,<br class="mo_block"> 검색하면 광고만 나와서<br> 어디로 가야할 지 모르시겠다면 Travel-log를 보세요
+                        <br>여행을 떠나야 하는데,<br class="mo_block"> 검색하면 광고만 나와서<br> 어디로 가야할 지 모르시겠다면 Travel-log를 보세요
                     </p>
                 </div>
             </div>
@@ -279,14 +313,14 @@
 
     <div class="sec sec06 sec_case" data-menu-idx="2">
         <div class="sec_inner sec_inner&#45;&#45;1st">
-            <div class="left_box">-->
+            <div class="left_box">
                 <div class="text_area">
                     <h2 class="sec_tit aos-init" data-aos="fade-up" data-aos-duration="1000">문구 추가<br>문구 추가</h2>
                     <p class="sec_desc aos-init" data-aos="fade-up" data-aos-duration="1000">
-                        문구 추가<br class="mo_block">
-                        문구 추가<br>문구 추가
+                      <br class="mo_block">
+                        <br>문구 추가
                     </p>
-                    <a href="" target="_blank" class="btn_anchor aos-init" data-aos="fade-up" data-aos-duration="1000">자세히보기</a>
+
                 </div>
             </div>
             <div class="right_box">
@@ -300,7 +334,7 @@
             <div class="right_box">
                 <div class="text_area">
                     <h2 class="sec_tit aos-init" data-aos="fade-up" data-aos-duration="1000">
-                        문구 추가 <br>문구 추가<br class="mo_block">문구 추가<br class="pc_block">문구 추가
+                        문구 추가 <br><br class="mo_block">문구 추가<br class="pc_block">
                     </h2>
                     <p class="sec_desc aos-init" data-aos="fade-up" data-aos-duration="1000">문구 추가 <br>문구 추가</p>
                 </div>

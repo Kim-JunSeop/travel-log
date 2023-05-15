@@ -1,4 +1,15 @@
 /* 모듈 컨테이너 위치를 고정하고, 오른쪽 하단에 배치 */
+
+* {
+    font-family: 'MaplestoryOTFLight';
+}
+
+@font-face {
+    font-family: 'MaplestoryOTFLight';
+    src: url(../fonts/NEXONLv1GothicRegular.ttf) format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
 .module {
     position: fixed;
     bottom: 20px;

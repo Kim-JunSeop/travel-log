@@ -327,7 +327,7 @@
 
             snapThreshold: 0.334,
 
-            // INSERT POINT: OPTIONS
+// INSERT POINT: OPTIONS
             disablePointer : !utils.hasPointer,
             disableTouch : utils.hasPointer || !utils.hasTouch,
             disableMouse : utils.hasPointer || utils.hasTouch,
@@ -392,7 +392,7 @@
 
         this.options.invertWheelDirection = this.options.invertWheelDirection ? -1 : 1;
 
-        // INSERT POINT: NORMALIZATION
+// INSERT POINT: NORMALIZATION
 
         // Some defaults
         this.x = 0;
@@ -401,7 +401,7 @@
         this.directionY = 0;
         this._events = {};
 
-        // INSERT POINT: DEFAULTS
+// INSERT POINT: DEFAULTS
 
         this._init();
         this.refresh();
@@ -432,7 +432,7 @@
                 this._initKeys();
             }
 
-            // INSERT POINT: _init
+// INSERT POINT: _init
 
         },
 
@@ -690,7 +690,7 @@
                 easing = this.options.bounceEasing;
             }
 
-            // INSERT POINT: _end
+// INSERT POINT: _end
 
             if ( newX != this.x || newY != this.y ) {
                 // change easing function when scroller goes out of the boundaries
@@ -800,7 +800,7 @@
 
             this.resetPosition();
 
-            // INSERT POINT: _refresh
+// INSERT POINT: _refresh
 
         },
 
@@ -929,7 +929,7 @@
             }
 
 
-            // INSERT POINT: _transitionTime
+// INSERT POINT: _transitionTime
 
         },
 
@@ -944,7 +944,7 @@
             }
 
 
-            // INSERT POINT: _transitionTimingFunction
+// INSERT POINT: _transitionTimingFunction
 
         },
 
@@ -975,7 +975,7 @@
             }
 
 
-            // INSERT POINT: _translate
+// INSERT POINT: _translate
 
         },
 
@@ -1244,7 +1244,7 @@
 
             this.scrollTo(newX, newY, 0);
 
-            // INSERT POINT: _wheel
+// INSERT POINT: _wheel
         },
 
         _initSnap: function () {
@@ -1909,7 +1909,7 @@
 
             this._pos(newX, newY);
 
-            // INSERT POINT: indicator._move
+// INSERT POINT: indicator._move
 
             e.preventDefault();
             e.stopPropagation();

@@ -134,6 +134,7 @@
   }
   :root {
     --swiper-navigation-size: 44px;
+      background-color: white;
     /*
     --swiper-navigation-color: var(--swiper-theme-color);
     */

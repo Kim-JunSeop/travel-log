@@ -8131,6 +8131,4 @@
 
     return Swiper;
 
-
-
 }));

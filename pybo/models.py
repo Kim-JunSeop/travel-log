@@ -1,4 +1,5 @@
 from pybo import db
+from datetime import datetime
 
 
 question_voter = db.Table(
@@ -14,39 +15,29 @@ answer_voter = db.Table(
 )
 
 
-class Health_Data(db.Model):
+#팔로우 알람을 저장할 테이블
+class FollowNotification(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    height = db.Column(db.Integer, nullable=False)
-    weight = db.Column(db.Integer, nullable=False)
-    body_fat = db.Column(db.Integer, nullable=False)
-    body_muscle = db.Column(db.Integer, nullable=False)
-    create_date = db.Column(db.DateTime(), nullable=False)
-    user_id = db.Column(db.Integer, db.ForeignKey('signup__data.id', ondelete='CASCADE'), nullable=False)
-    user = db.relationship('Signup_Data', backref=db.backref('question_set'))
-
-class Exercise_Data(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    exercise_type = db.Column(db.String(200), nullable=False)
-    exercise_time = db.Column(db.Integer, nullable=False)
-    exercise_note = db.Column(db.Text(), nullable=False)
-    create_date = db.Column(db.DateTime(), nullable=False)
-    user_id = db.Column(db.Integer, db.ForeignKey('signup__data.id', ondelete='CASCADE'), nullable=False)
-    user2 = db.relationship('Signup_Data', backref=db.backref('exercise_set'))
-
+    user_id = db.Column(db.Integer, db.ForeignKey("signup__data.id"), nullable=False)
+    sender_id = db.Column(db.Integer, db.ForeignKey("signup__data.id"), nullable=False)
+    timestamp = db.Column(db.DateTime, default=datetime.utcnow)
+    is_read = db.Column(db.Boolean, default=False)
 
 class Signup_Data(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.Integer, primary_key=True) # 이 값은 question table의 user_id와 같은 값임.
     user_name = db.Column(db.String(150), nullable=False)
     user_id = db.Column(db.String(200), unique=True,nullable=False)
     user_password = db.Column(db.String(200), nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
     phone = db.Column(db.String(150), nullable=False)
+    notifications = db.relationship("FollowNotification", foreign_keys=[FollowNotification.user_id], backref="user", lazy="dynamic")
     friends = db.relationship("Signup_Data",
-                            secondary="friendship",
-                            primaryjoin="Signup_Data.id==Friendship.user1_id",
-                            secondaryjoin="Signup_Data.id==Friendship.user2_id",
-                            backref=db.backref("followers", lazy="dynamic"),
-                            lazy="dynamic")
+                              secondary="friendship",
+                              primaryjoin="Signup_Data.id==Friendship.user1_id",
+                              secondaryjoin="Signup_Data.id==Friendship.user2_id",
+                              backref=db.backref("followers", lazy="dynamic"),
+                              lazy="dynamic")
+    profile_img = db.Column(db.String(200))
 
     def follow(self, user):
         if user not in self.friends:
@@ -55,10 +46,17 @@ class Signup_Data(db.Model):
     def unfollow(self, user):
         if user in self.friends:
             self.friends.remove(user)
-    
+
+    def add_follow_notification(self, sender_id):
+        notification = FollowNotification(sender_id=sender_id, user_id=self.id)
+        db.session.add(notification)
+        db.session.commit()
+
 class Friendship(db.Model):
     user1_id = db.Column(db.Integer, db.ForeignKey("signup__data.id"), primary_key=True)
     user2_id = db.Column(db.Integer, db.ForeignKey("signup__data.id"), primary_key=True)
+
+
 
 
 class Question(db.Model):
@@ -74,7 +72,15 @@ class Question(db.Model):
     img_name = db.Column(db.String(200))
     summary = db.Column(db.Text(), nullable=True)
 
-
+class AddMarker(db.Model):
+    id = db.Column(db.Integer, primary_key=True)  # Marker id
+    user_id = db.Column(db.Integer, db.ForeignKey('signup__data.id', ondelete='CASCADE'), nullable=False)
+    user = db.relationship('Signup_Data', backref=db.backref('marker_set'))
+    local =  db.Column(db.String(200)) # Marker longitude
+    subject = db.Column(db.String(200), nullable=False)  # Marker title
+    content = db.Column(db.Text(), nullable=False)  # Marker content
+    img_name = db.Column(db.String(200))
+    image_dir = db.Column(db.String(200))  # Marker image directory
 
 
 class Answer(db.Model):

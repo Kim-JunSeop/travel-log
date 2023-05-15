@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="ckeditor">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/pybo/static/js/ckeditor.zip!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
