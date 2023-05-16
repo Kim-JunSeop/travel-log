@@ -10,7 +10,9 @@
     border-bottom: solid 2px #e1e1e1;
 }
 
-
+i#notifications-icon{
+    color: #3288FF;
+}
 
 #header h1 {
     position: absolute;

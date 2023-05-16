@@ -5,18 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/nav.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.5.5.0.min.css')}}">
     <script src="{{ url_for('static', filename='js/popup.js') }}"></script>
     <title>Travelog</title>
     <link rel="icon" href="{{url_for('static', filename='image/favicon (2).ico')}}">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-
     <!-- 만약 base.html하고 합치게 된다면, 아래 코드를 꼭 넣어야함(marker2에 대한 창 만들어주는 라이브러리 로드임) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    
-
-
 </head>
 <body>
     <!-- Header start-->
@@ -92,11 +88,11 @@
 
                 <br>
                 {% endif %}
-                <p class="phonenumber"> {{ g.user.phone}}<br>핸드폰 번호</p>
+                <p class="phonenumber"> {{ g.user.phone}}</p>
                 <br><br><br>
 
                 {% else %}
-                <h2>마이 프로필</h2>
+                <h2 class="myprofile_1">마이 프로필</h2>
                 <p class="pleaselogin">로그인을 해주세요</p>
                 {% endif %}
             </div>

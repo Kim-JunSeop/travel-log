@@ -673,7 +673,7 @@ pre code {
     .container-md,
     .container-sm,
     .container-xl {
-        max-width: 1140px;
+        max-width: 900px;
     }
 }
 
@@ -769,7 +769,7 @@ pre code {
 .col-xl-auto {
     position: relative;
     width: 100%;
-    padding-right: 15px;
+    padding-right: 5px;
     padding-left: 15px;
 }
 
@@ -7606,13 +7606,14 @@ button.bg-dark:hover {
     padding: 1.1em; /* prevents text jump on Enter keypress */
     padding-bottom: 0.2em;
     line-height: 1.6;
-    /*border-color : green;*/
-    border-radius : 50px;
+
+    border: 2px solid rgba(0, 0, 0, 0.125);
     /*border-width : thick;*/
     /*border-style : dashed;*/
     text-align : left;
     font-weight : light;
     font-size: 20px;
+    font-family: MaplestoryOTFLight;
     /*background-color : lightgreen;*/
 }
 .form-control3 {

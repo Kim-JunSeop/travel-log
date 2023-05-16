@@ -12,7 +12,7 @@
 
     <!-- 만약 base.html하고 합치게 된다면, 아래 코드를 꼭 넣어야함(marker2에 대한 창 만들어주는 라이브러리 로드임) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.4.5.0.min.css')}}">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
 </head>
@@ -68,8 +68,8 @@
                         <img data-url="/bz17854" class="usr_img" style="border-radius: 50%; width: 130px; height: 130px;" alt="작성자 프로필 이미지" src="{{ url_for('static', filename='image/User.png') }}">
                     {% endif %}
                     <span class="friend-name">{{ friend.user_name }}</span>
-                    <span class="friend-id">{{ friend.id }}</span>
-                    <span class="friend-email">{{ friend.email }}</span>
+                    <span class="friend.user_id">{{ friend.user_id }}</span>
+                    <span class="friend-phone">{{ friend.phone }}</span>
                 </div>
                 <div class="friend-actions"> <!--friends/follow엔드포인트로 주는 걸 .id인 인티저로 넘김12,11같이-->
                     <form action="{{ url_for('friends.follow', user_id=friend.id) }}" method="post" class="d-inline">
@@ -109,10 +109,12 @@
                 userElement.className = 'col-12 col-md-6 col-lg-4 mb-3';
                 userElement.innerHTML = `
                     <div class="card">
-                        <img src="${user.image}" class="card-img-top" alt="Profile picture">
+                     <img id="profileImg"
+                             src="{{ url_for('static', filename='image/profile/' + friend.user_id + '/' + friend.profile_img if g.user.profile_img else 'image/User.png') }}"
+                             style="border-radius: 50%; width: 130px; height: 130px;" />
                         <div class="card-body">
                             <h5 class="card-title">${user.user_name} (${user.user_id})</h5>
-                            <p class="card-text">${user.email}</p>
+                            <p class="card-text">${user.phone}</p>
                             {% if g.user is not none %}
                             <form action="/friends/follow/${user.id}" method="post">
                                 <input type="submit" value="팔로우" class="btn btn-primary">

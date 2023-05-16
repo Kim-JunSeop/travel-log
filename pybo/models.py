@@ -19,6 +19,7 @@ answer_voter = db.Table(
 class FollowNotification(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey("signup__data.id"), nullable=False)
+    phone = db.Column(db.String(150), db.ForeignKey("signup__data.phone"), nullable=False)
     sender_id = db.Column(db.Integer, db.ForeignKey("signup__data.id"), nullable=False)
     timestamp = db.Column(db.DateTime, default=datetime.utcnow)
     is_read = db.Column(db.Boolean, default=False)

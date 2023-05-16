@@ -63,11 +63,11 @@ async function createCustomOverlay(markerData, isMarker2) {
         <div class="custom-overlay">
             <div class="info-window">
                 <div class="image-container">
-                    <button class="slide-button left">&lt;</button>
+                    <button class="slide-button left"</button>
                     <img src="${imageSrc0}" class="active" /> 
                     <!-- 추가 이미지를 아래와 같이 추가합니다 -->
                     <!-- <img src="/static/image/another_image.jpg" /> -->
-                    <button class="slide-button right">&gt;</button>
+                    <button class="slide-button right"</button>
                 </div>
                 <p>${markerData.subject}</p>
                 <p><a href="http://127.0.0.1:5000/question/detail/${markerData.id}">바로가기</a></p>

@@ -480,6 +480,7 @@ box-shadow: 0px 24px 21px 0 rgba(0, 0, 0, 0.4);
  height: 400px;
  display: inline-block;
 }
+
 #container .srh_com_box .help_srh_box:before {
  content : "";
  position: absolute;
