@@ -13,7 +13,7 @@ def submit():
     if request.method == "POST":
         content = request.form["content"]
 
-        openai.api_key = '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'
+        openai.api_key = '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'
         response = openai.Completion.create(
             model="text-davinci-003",
             prompt=f"아래 내용을 카테고리별로 정리해줘 그리고 일정 관광지 관광내용만 나오게 출력해줘:\n\n{content}.\n",
@@ -35,7 +35,7 @@ def chatbot():
     if request.method == "POST":
         message = request.json["message"]
 
-        openai.api_key = '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'
+        openai.api_key = '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'
         response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=[
@@ -60,7 +60,7 @@ def dalle1():
     if request.method == "POST":
         message = request.json["message"]
 
-        openai.api_key = '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'
+        openai.api_key = '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'
         response = openai.Image.create(
             prompt=f"{message}",
             n=1,
@@ -105,7 +105,7 @@ def dalle2():
         image1_buffer.seek(0)
         image2_buffer.seek(0)
 
-        openai.api_key = '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'
+        openai.api_key = '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'
         response = openai.Image.create_edit(
             image=image1_buffer.read(),
             mask=image2_buffer.read(),
@@ -126,7 +126,7 @@ def dalle3():
     if request.method == "POST":
         message = request.form["message"]
 
-        openai.api_key = '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'
+        openai.api_key = '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'
         response = openai.Image.create_variation(
             image=open("corgi_and_cat_paw.png", "rb"),
             n=1,

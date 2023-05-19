@@ -183,10 +183,6 @@ m
 =pybo/static/js/ckeditor 2/plugins/a11yhelp/dialogs/lang/eu.js,3\9\391147e65ce79bdb3fb18bc4d8994d808994ed17
 m
 =pybo/static/js/ckeditor 2/plugins/a11yhelp/dialogs/lang/si.js,7\b\7b6273c5a4a1647904939111940f5f312ea6a077
-I
-pybo/static/css/tonte.css,6\e\6e32083b3d5f46e316fcd49f546f903874b67e78
-G
-pybo/static/css/aos.css,e\a\ea44c95cce87378f7bb44f21a036659610c46dc5
 m
 =pybo/static/js/ckeditor 2/plugins/a11yhelp/dialogs/lang/no.js,9\c\9cf0895d842aa37038e68cc108b8c9109ec70f2b
 m
@@ -271,10 +267,6 @@ m
 =pybo/static/js/ckeditor 2/plugins/a11yhelp/dialogs/lang/ku.js,7\a\7a957b6e9e26f4cef0d4f9da02d0d000dda493e2
 l
 <pybo/static/js/ckeditor 2/plugins/clipboard/dialogs/paste.js,b\4\b43141cfa9f6a5c1e0fc25f17e63593ac192316b
-J
-pybo/templates/signup.html,7\5\754f9eff6baf238be780d617593ec623a61aaea1
-I
-pybo/templates/login.html,a\2\a2230be4b1fb10fadd3ddca7ff6d2e4d49860911
 s
 Cpybo/static/js/ckeditor 2/plugins/exportpdf/tests/authentication.js,f\1\f16ef1eb1a935a63130604a38b17ac139c65aabb
 n
@@ -287,16 +279,10 @@ p
 @pybo/static/js/ckeditor 2/plugins/exportpdf/tests/stylesheets.js,9\d\9da7aa01e3a36a032bb6b4a10e556cd2f0136eb9
 q
 Apybo/static/js/ckeditor 2/plugins/exportpdf/tests/notification.js,8\e\8ec8b594f5bfef9347553b3202b810584050e613
-O
-pybo/static/js/bootstrap.min.js,0\1\01d2ba010970f2d369fa24719d0a4d5493ffa521
 R
 "pybo/static/js/jquery-3.5.1.min.js,9\1\91bc05e49f403e5c0a55b7cbf2a51b1a9648edec
 J
 pybo/static/js/autosize.js,5\5\55351fb8a8a207b0333b5dce7d3b46bd9f5ecc1e
-J
-pybo/static/css/signup.css,3\4\34a0d39556543d6660d3588d79b127d3f525cea3
-I
-pybo/static/css/login.css,1\c\1cfb9aecc427edea1b6c7ee4019b46e038cf8112
 N
 pybo/static/json/Feature3.json,1\e\1e930c1adcc7204095c7f38387e4f9eb3c47cb8b
 O
@@ -497,3 +483,36 @@ m
 =pybo/static/js/ckeditor 2/plugins/a11yhelp/dialogs/lang/ar.js,2\a\2a251b535755bd23456888d6ea63d9f6ce7339bb
 p
 @pybo/static/js/ckeditor 2/plugins/specialchar/dialogs/lang/ar.js,1\5\1586fe8e2111c22949355d5dbd540479e9c29fd1
+Z
+*pybo/templates/question/question_form.html,5\1\510e096f598b331e722f23c5a2939837cb8f6a40
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
+>
+pybo/filter.py,c\5\c50b8f5b7cc27d520a6a4f60b000c686bf1374ff
+=
+pybo/forms.py,7\9\79036cdcbd9bf246b2686af054b8a72558f94dd7
+>
+pybo/models.py,9\b\9b74eff19813520c75eeaa8271ca3ba91879d319
+I
+pybo/static/css/story.css,4\6\46938fa30e7f226ee72b9e2f273988eca2f9a339
+H
+pybo/static/js/swiper.js,2\6\26b7ce243b906480422a6281889e74e2deb39fbc
+I
+pybo/static/js/preview.js,1\b\1bffb8525402c017fa5cc8f2e250ac6dcd636a02
+K
+pybo/views/friends_views.py,9\c\9cb4ba8b58a063c145ebf0a72d02492f17d7ece9
+G
+pybo/templates/404.html,3\e\3e9745e0296776918e32ef5e5ae2a8587a082ca4
+\
+,pybo/templates/question/question_detail.html,c\2\c27b1d8301f9b84be7b9ba1cdba804ec2f57dade
+K
+pybo/static/css/profile.css,8\c\8c3c9a1effd708a6252042c49e62f1e3a0fd8525
+W
+'pybo/static/css/bootstrap.5.5.0.min.css,b\4\b4eb8cbac50968cfb29cc8e8908c4225cda4d679
+R
+"pybo/static/css/2bootstrap.min.css,8\d\8d3916e635caf5cacec1c40a449a2232804cf134
+I
+pybo/static/css/tonte.css,6\e\6e32083b3d5f46e316fcd49f546f903874b67e78
+O
+pybo/static/css/swiper2.min.css,6\8\683bcad9d101a1c934591fd8fae3fa0eebece585

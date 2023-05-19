@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+
 
 *, ::before, ::after {
     box-sizing: border-box;
@@ -9,9 +9,23 @@ body {
     padding: 0;
     font-family: "Open Sans", sans-serif;
     font-size: 0.938rem;
-    color: #23004d;
+
+}
+* {
+    font-family: 'MaplestoryOTFLight';
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+    color: #3288FF;
+    list-style: none;
 }
 
+@font-face {
+    font-family: 'MaplestoryOTFLight';
+    src: url(../fonts/NEXONLv1GothicRegular.ttf) format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
 h1 {
     margin: 0;
 }
@@ -80,7 +94,7 @@ img {
 .login__title {
     font-size: 1.5rem;
     margin-bottom: 2rem;
-    color: #6C63FF;
+    color: #3288FF;
 }
 
 .login__box {
@@ -95,7 +109,7 @@ img {
 
 .login__icon {
     font-size: 1.5rem;
-    color: #6C63FF;
+    color: #3288FF;
 }
 
 .login__input {
@@ -127,7 +141,7 @@ img {
     display: block;
     padding: 1rem;
     margin: 2rem 0;
-    background-color: #6C63FF;
+    background-color: #3288FF;
     color: #fff;
     font-weight: 600;
     text-align: center;
@@ -139,7 +153,7 @@ img {
     display: block;
     padding: 1rem;
     margin: 2rem 0;
-    color: #6C63FF;
+    color: #3288FF;
     color: #fff;
     font-weight: 600;
     text-align: center;
@@ -148,7 +162,7 @@ img {
 }
 
 .login__button:hover {
-    background-color: #6C63FF;
+    background-color: #3288FF;
 }
 
 .login__account, .login__signin, .login__signup {
@@ -161,7 +175,7 @@ img {
 }
 
 .login__account--signin, .login__account--signup, .login__signin--signin, .login__signin--signup, .login__signup--signin, .login__signup--signup {
-    color: #6C63FF;
+    color: #3288FF;
     cursor: pointer;
 }
 
@@ -230,7 +244,7 @@ img {
     }
 
     .login__register, .login__create {
-        left: 66rem;
+        left: 50rem;
     }
     .login__registe, .login__creat {
         left: 70rem;
@@ -258,7 +272,7 @@ input[type="submit" i] {
     display: block;
     padding: 1rem;
     margin: 2rem 0;
-    background-color: #6C63FF;
+    background-color: #3288FF;
     color: #fff;
     font-weight: 600;
     text-align: center;

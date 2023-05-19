@@ -1,11 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Travel-log</title>
+</head>
+<style>
+    .summary_box {
+        display: none;
+        position: absolute;
+        background-color: white;
+        padding: 10px;
+        border: 1px solid black;
+        z-index: 1;
+    }
+
+    .card:hover .summary_box {
+        display: block;
+    }
+</style>
+<body>
+
 {% extends 'base.html' %}
 {% block content %}
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<style>
-    .scroll::-webkit-scrollbar {
-        display: none;
-    }
-</style>
 <div id="mainPjax">
     <div class="main story">
         <div id="container">
@@ -129,9 +149,10 @@
                 <a class="page-link" tabindex="-1" aria-disabled="true" href="#">다음</a>
             </li>
             {% endif %}
+            <a href="{{ url_for('question.create') }}" class="btn btn-primary">글 작성하기</a>
         </ul>
         <!-- 페이징처리 끝 -->
-        <a href="{{ url_for('question.create') }}" class="btn btn-primary">글 작성하기</a>
+
     </div>
 
 </div>
@@ -142,22 +163,76 @@
 </form>
 {% endblock %}
 {% block script %}
+
 <script type='text/javascript'>
     $(document).ready(function () {
         $(".page-link").on('click', function () {
             $("#page").val($(this).data("page"));
             $("#searchForm").submit();
         });
+
+        $(".kw").on('keydown', function (event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                $("#kw").val($(this).val());
+                $("#page").val(1);
+                $("#searchForm").submit();
+            }
+        });
+
         $("#btn_search").on('click', function () {
             $("#kw").val($(".kw").val());
-            $("#page").val(1);  // 검색버튼을 클릭할 경우 1페이지부터 조회한다.
+            $("#page").val(1);
             $("#searchForm").submit();
         });
+
         $(".so").on('change', function () {
             $("#so").val($(this).val());
             $("#page").val(1);
             $("#searchForm").submit();
         });
     });
+
+
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.card').hover(
+            function() {
+                $(this).find('.summary_box').show();
+            },
+            function() {
+                $(this).find('.summary_box').hide();
+            }
+        );
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var searchInput = document.querySelector('.kw');
+        var searchButton = document.querySelector('#btn_search');
+
+        searchInput.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                performSearch();
+            }
+        });
+
+        searchButton.addEventListener('click', function() {
+            performSearch();
+        });
+
+        function performSearch() {
+            var searchTerm = searchInput.value;
+            // 실제 검색 동작을 구현하고 searchTerm을 활용해주세요
+            console.log('검색어:', searchTerm);
+        }
+    });
+
+
 </script>
 {% endblock %}
+</body>
+</html>

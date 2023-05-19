@@ -152,6 +152,7 @@ img.image-preview {
     text-align: center;
     font-weight:bold;
     font-size:13px;
+    border-radius: 5px;
 }
 .filter-section input[type=radio]+label{
     background-color: #fff;
@@ -162,7 +163,7 @@ img.image-preview {
     color: #fff;
 }
 .myprofile {
-    margin: 70px 15px;
+    margin: 30px;
     text-align: center;
 }
 h2.myprofile_1 {

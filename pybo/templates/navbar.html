@@ -1,38 +1,41 @@
-<!-- 네비게이션바 -->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bar.css') }}">
+
+
+
+</head>
+<body>
 <div class="han_nav">
     <nav class="navbar navbar-expand-lg navbar-light hello">
-        <a class="navbar-brand logo" href="/"><b>Travel.log</b></a>
         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <header id="header">
-
+            <a class="menu-trigger" href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
             <div class="inner">
                 <h1><a href="/">Travelog</a></h1>
                 <div class="gnb">
                     {% if g.user %}
                     <ul>
-                        <li><a href='/friends/find_friends'>친구찾기</a></li>
-                        <li><a href="/question/list">블로그</a></li>
-                        <li><a href="/input">나만의 지도</a></li>
                         <li class="nav-item ">
                             <a class="nav-link" href="{{ url_for('main.logout') }}">{{ g.user.user_name }} 님(로그아웃)</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <b class="nav-link1" id="notifications-dropdown" href="#" role="button"
-                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-
-                                <i class="fa fa-bell" id="notifications-icon"></i>
-                                <span class="badge badge-danger" id="unread-notifications-count"
-                                      style="display: none;"></span>
-                            </b>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="notifications-dropdown"
-                                 id="notifications-dropdown-menu">
-                                <div id="notifications-placeholder">로딩 중...</div>
-                            </div>
-                        </li>
+                        <li><a href='/friends/find_friends'>친구찾기</a></li>
+                        <li><a href="/question/list">Blog</a></li>
+                        <li><a href="/input">Map</a></li>
                     </ul>
                     {% else %}
                     <ul>
@@ -40,7 +43,6 @@
                         <li><a href="/question/list">블로그</a></li>
                         <li><a href="/input">나만의 지도</a></li>
                         <li><a href="/login">Login</a></li>
-                        <li><a href=/signup>SignUp</a></li>
                     </ul>
                     {% endif %}
                 </div>
@@ -48,6 +50,7 @@
         </header>
     </nav>
 </div>
+<script src="{{ url_for('static', filename='js/bar.js') }}"></script>
 <script>
     async function fetchFollowNotifications() {
         const response = await fetch('/friends/get_follow_notifications');
@@ -112,6 +115,6 @@
     // 페이지 로드 시 알림 데이터 가져오기
     document.addEventListener("DOMContentLoaded", displayFollowNotifications);
 </script>
-    
-
+</body>
+</html>
 

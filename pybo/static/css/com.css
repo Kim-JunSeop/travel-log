@@ -1,13 +1,22 @@
 /* LAYOUT */
+::-webkit-scrollbar {
+	display: none;
+}
 #id_cmm_list
 {
 	padding:10px 0 0 0;
 }
 
 #list{
-	margin-top: 2%;
+	margin-top: 4%;
 }
-
+.category {
+	margin-left: 2%;
+	margin-right: 5%;
+}
+.scroll::-webkit-scrollbar {
+	display: none;
+}
 #con_list {
 	position: relative;
 

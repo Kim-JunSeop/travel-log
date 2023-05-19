@@ -4,27 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e50e83cd-d74d-482a-b6b8-fd4d35492efb" name="Changes" comment="refactor : 폰트 적용 및 미디어쿼리 수정">
-      <change afterPath="$PROJECT_DIR$/pybo/static/css/bootstrap.4.5.0.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pybo/static/css/bootstrap.5.5.0.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pybo/static/js/preview.js" afterDir="false" />
+    <list default="true" id="e50e83cd-d74d-482a-b6b8-fd4d35492efb" name="Changes" comment="refactor : 대표 색상 적용">
+      <change afterPath="$PROJECT_DIR$/pybo/static/css/bar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pybo/static/js/bar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pybo/static/js/index/index_1fetch.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pybo/static/js/index/index_3customoverlay.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pybo/static/js/index/index_4displaymarkers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pybo/static/js/index/index_5main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pybo/static/js/index/index_6marker2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pybo/static/js/index/index_map.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pybo/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pybo/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mydata2.db" beforeDir="false" afterPath="$PROJECT_DIR$/mydata2.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/static/css/aos.css" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/css/aos.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/static/css/bootstrap.4.5.0.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/css/bootstrap.4.5.0.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pybo/static/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/static/css/com.css" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/css/com.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pybo/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/static/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pybo/static/css/module.css" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/css/module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pybo/static/css/nav.css" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/css/nav.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pybo/static/css/normalize.css" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/css/normalize.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pybo/static/css/story.css" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/css/story.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pybo/static/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pybo/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/static/css/signup.css" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/css/signup.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/static/image/morkupimage2.png" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/image/morkupimage2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/static/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/js/index/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pybo/templates/friends/find_friends.html" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/templates/friends/find_friends.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pybo/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/templates/main.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pybo/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/templates/navbar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pybo/templates/question/question_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/templates/question/question_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pybo/views/friends_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/views/friends_views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/templates/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/views/openai_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/views/openai_views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +66,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2PE7lDGOQhpUFFNGp8tqDngb0kh" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
@@ -76,6 +91,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\KIMJUNSEOP\travel-log\pybo\static\js\index" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="travel-log" type="PythonConfigurationType" factoryName="Python">
       <module name="travel-log" />
@@ -122,7 +142,18 @@
       <workItem from="1684057347570" duration="3518000" />
       <workItem from="1684124924311" duration="11364000" />
       <workItem from="1684142695361" duration="6320000" />
-      <workItem from="1684207196260" duration="9350000" />
+      <workItem from="1684207196260" duration="9618000" />
+      <workItem from="1684220552294" duration="41000" />
+      <workItem from="1684220619161" duration="23000" />
+      <workItem from="1684220792384" duration="50000" />
+      <workItem from="1684220988221" duration="10000" />
+      <workItem from="1684221297447" duration="19000" />
+      <workItem from="1684299485257" duration="6010000" />
+      <workItem from="1684373948534" duration="4278000" />
+      <workItem from="1684382910778" duration="4481000" />
+      <workItem from="1684473053181" duration="5200000" />
+      <workItem from="1684484852864" duration="43000" />
+      <workItem from="1684485109817" duration="1317000" />
     </task>
     <task id="LOCAL-00001" summary="feat : 슬라이드 애니메이션 추가">
       <created>1683877996599</created>
@@ -131,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683877996599</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="refactor : 대표 색상 적용">
+      <created>1684218383889</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1684218383889</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,6 +178,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat : 슬라이드 애니메이션 추가" />
     <MESSAGE value="refactor : 폰트 적용 및 미디어쿼리 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor : 폰트 적용 및 미디어쿼리 수정" />
+    <MESSAGE value="refactor : 대표 색상 적용" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor : 대표 색상 적용" />
   </component>
 </project>

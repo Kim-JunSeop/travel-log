@@ -16,10 +16,7 @@
 
 <div class="login">
     <div class="login__content">
-        <div class="login__img">
-            <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_ayk6t8xd.json" background="transparent"
-                           speed="1" style="width: 520px; height: 520px;" loop autoplay></lottie-player>
-        </div>
+
         <div class="login__forms">
             <form method="post" class="login__register" id="login-in">
                 {{ form.csrf_token }}
@@ -44,11 +41,11 @@
                 {% endfor %}
 
                 <div class="login__forms">
-                    <h1 class="login__title">Sign In</h1>
+                        <h1 class="login__title">로그인</h1>
                     <div>
                         <div class="login__box" class="login__regist1">
                             <i class="iconify login__icon" data-icon="fluent-emoji-high-contrast:id-button"></i>
-                            <input type="text" placeholder="Id" class="login__input" name="userid" required=""
+                            <input type="text" placeholder="아이디" class="login__input" name="userid" required=""
                                    autocomplete="off" class="login_input" ,
                                    value="{{ form.userid.data or '' }}">
                         </div>
@@ -56,16 +53,16 @@
                     <div>
                         <div class="login__box">
                             <i class='bx bx-lock login__icon'></i>
-                            <input type="password" placeholder="Password" class="login__input" name="password"
+                            <input type="password" placeholder="비밀번호" class="login__input" name="password"
                                    required="" autocomplete="off" class="login_input" ,
                                    value="{{ form.password.data or '' }}">
                         </div>
                     </div>
                 </div>
-                <input type="submit" value="Sign In" class="login__button">
+                <input type="submit" value="로그인" class="login__button">
                 <div>
-                    <span class="login__account login__account--account">Don't Have an Account?</span>
-                    <span class="login__signin login__signin--signup" id="sign-up"><a href="/signup">Sign Up</a></span>
+                    <span class="login__account login__account--account">계정이 없으신가요?</span>
+                    <span class="login__signin login__signin--signup" id="sign-up"><a href="/signup">회원가입</a></span>
                 </div>
             </form>
         </div>

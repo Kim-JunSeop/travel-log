@@ -3019,7 +3019,7 @@ fieldset:disabled a.btn {
 
 .btn-primary {
     color: #fff;
-    background-color: #007bff;
+    background-color: #3288FF;
     border-color: #007bff;
 }
 
@@ -4918,7 +4918,18 @@ input[type="submit"].btn-block {
     padding: 0.5rem 1rem;
     padding-right: 200px;
 }
+.summary_box {
+    display: none;
+    position: absolute;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid black;
+    z-index: 1;
+}
 
+.card:hover .summary_box {
+    display: block;
+}
 .navbar .container,
 .navbar .container-fluid,
 .navbar .container-lg,

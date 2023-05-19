@@ -62,7 +62,12 @@
   font-weight: 600;
   margin-bottom: 20px;
 }
-
+p.user{
+    float:right;
+}
+p.chatbot {
+    float: left;
+}
 .chatbot-messages {
   height: 300px;
   overflow-y: auto;
