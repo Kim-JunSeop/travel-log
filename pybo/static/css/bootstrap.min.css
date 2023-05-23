@@ -3010,6 +3010,8 @@ textarea.form-control.is-invalid {
 .btn:not(:disabled):not(.disabled) {
     cursor: pointer;
     display: inline-block; margin: 0 1px;  float: right;
+    /*margin-bottom: 50px;*/
+    /*margin-left: 450px;*/
 }
 
 a.btn.disabled,
@@ -4919,8 +4921,7 @@ input[type="submit"].btn-block {
     padding-right: 200px;
 }
 .summary_box {
-    display: none;
-    position: absolute;
+    width: 100%;
     background-color: white;
     padding: 10px;
     border: 1px solid black;
@@ -9222,7 +9223,7 @@ button.bg-dark:hover {
     margin: 1rem !important;
 }
 h1.blog_subject {
-    margin-top: 10%;
+    margin-top: 16%;
 }
 .mt-3,
 .my-3 {
