@@ -333,18 +333,23 @@ h2.myprofile_1 {
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px;
-    width: 200px;
+    width: 350px;
+    height: 350px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     position: relative;
 }
 
 .custom-overlay .info-window .image-container {
     width: 100%;
-    height: 100px;
+    height: 270px;
     overflow: hidden;
     position: relative;
 }
-
+button#detailButton
+{
+    float: right;
+    display: flex;
+}
 .custom-overlay .info-window img {
     width: 100%;
     height: auto;
@@ -353,24 +358,38 @@ h2.myprofile_1 {
     left: 0;
     transition: all 0.3s ease;
 }
+button.infoClose {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5
+}
+button.infoClose:hover {
+    color: #000;
+    text-decoration: none
+}
+
 
 .custom-overlay .info-window p {
-    margin-top: 10px;
+    /*margin-top: 10px;*/
     font-size: 14px;
 }
 
-.slide-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.8);
-    border: none;
-    outline: none;
-    padding: 8px;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 1;
-}
+/*.slide-button {*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    transform: translateY(-50%);*/
+/*    background-color: rgba(255, 255, 255, 0.8);*/
+/*    border: none;*/
+/*    outline: none;*/
+/*    padding: 8px;*/
+/*    border-radius: 50%;*/
+/*    cursor: pointer;*/
+/*    z-index: 1;*/
+/*}*/
 
 .slide-button:hover {
     background-color: rgba(255, 255, 255, 1);
