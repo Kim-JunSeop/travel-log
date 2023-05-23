@@ -4,39 +4,67 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e50e83cd-d74d-482a-b6b8-fd4d35492efb" name="Changes" comment="refactor : 대표 색상 적용">
-      <change afterPath="$PROJECT_DIR$/pybo/static/css/bar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pybo/static/js/bar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pybo/static/js/index/index_1fetch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pybo/static/js/index/index_3customoverlay.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pybo/static/js/index/index_4displaymarkers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pybo/static/js/index/index_5main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pybo/static/js/index/index_6marker2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pybo/static/js/index/index_map.js" afterDir="false" />
+    <list default="true" id="e50e83cd-d74d-482a-b6b8-fd4d35492efb" name="Changes" comment="refactor : 폰트 적용">
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/0002affd80c9_.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/versions/0002affd80c9_.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/0d7dbc4c351d_.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/versions/0d7dbc4c351d_.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/0daed9c47e2f_.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/versions/0daed9c47e2f_.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/216dbe11c774_.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/versions/216dbe11c774_.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/27e481c482a5_.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/versions/27e481c482a5_.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/2c660a206adf_.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/versions/2c660a206adf_.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/3270ac23bbe7_.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/versions/3270ac23bbe7_.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/346f0f3beef7_.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/versions/346f0f3beef7_.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/4b0d80b147fe_.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/versions/4b0d80b147fe_.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/639434d696bc_.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/versions/639434d696bc_.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/64bc212abfd6_.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/versions/64bc212abfd6_.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/6eca297157b5_.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/versions/6eca297157b5_.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/70712cd3e48e_.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/versions/70712cd3e48e_.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/72d803b9079f_.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/versions/72d803b9079f_.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/7bf9b014e1a3_.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/versions/7bf9b014e1a3_.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/7f28f1ee28ad_.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/versions/7f28f1ee28ad_.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/85a26ce843cc_.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/versions/85a26ce843cc_.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/85aaff44c37b_.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/versions/85aaff44c37b_.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/86d84825a950_.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/versions/86d84825a950_.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/8af9eee3741c_.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/versions/8af9eee3741c_.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/8d20832158be_.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/versions/8d20832158be_.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/97203df0bd15_.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/versions/97203df0bd15_.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/9ea3085d0529_.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/versions/9ea3085d0529_.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/bcf19a8bc471_.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/versions/bcf19a8bc471_.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/cf402a5d205b_.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/versions/cf402a5d205b_.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/d4b6a133687e_.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/versions/d4b6a133687e_.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/d5c19e4bdc78_.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/versions/d5c19e4bdc78_.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/efe9c1e096fb_.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/versions/efe9c1e096fb_.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/f1e1a9050b1b_.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/versions/f1e1a9050b1b_.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/f6185ed5c637_.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/versions/f6185ed5c637_.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/f78bdfa035ad_.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/versions/f78bdfa035ad_.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/f8e720ad639c_.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/versions/f8e720ad639c_.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mydata2.db" beforeDir="false" afterPath="$PROJECT_DIR$/mydata2.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pybo/static/css/aos.css" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/css/aos.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/static/css/bar.css" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/css/bar.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pybo/static/css/bootstrap.4.5.0.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/css/bootstrap.4.5.0.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pybo/static/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pybo/static/css/com.css" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/css/com.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pybo/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pybo/static/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/css/login.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pybo/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pybo/static/css/module.css" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/css/module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pybo/static/css/nav.css" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/css/nav.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pybo/static/css/normalize.css" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/css/normalize.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pybo/static/css/signup.css" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/css/signup.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pybo/static/image/morkupimage2.png" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/image/morkupimage2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pybo/static/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/js/index/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/static/image/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/static/image/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/image/2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/static/js/assuretee.js" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/js/assuretee.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/static/js/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/js/index/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/static/js/index/index_3customoverlay.js" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/js/index/index_3customoverlay.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/static/js/index/index_4displaymarkers.js" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/js/index/index_4displaymarkers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/static/js/module.js" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/js/module.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pybo/templates/friends/find_friends.html" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/templates/friends/find_friends.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pybo/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pybo/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pybo/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/templates/main.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pybo/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/templates/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pybo/templates/question/question_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/templates/question/question_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pybo/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/templates/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/templates/question/question_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/templates/question/question_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/views/friends_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/views/friends_views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pybo/views/openai_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/views/openai_views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/views/question_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/views/question_views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/views/route_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/views/route_views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,6 +182,14 @@
       <workItem from="1684473053181" duration="5200000" />
       <workItem from="1684484852864" duration="43000" />
       <workItem from="1684485109817" duration="1317000" />
+      <workItem from="1684486483518" duration="229000" />
+      <workItem from="1684653215976" duration="9463000" />
+      <workItem from="1684665033582" duration="1235000" />
+      <workItem from="1684666786422" duration="645000" />
+      <workItem from="1684667635281" duration="947000" />
+      <workItem from="1684672180589" duration="974000" />
+      <workItem from="1684769683930" duration="182000" />
+      <workItem from="1684818410768" duration="14428000" />
     </task>
     <task id="LOCAL-00001" summary="feat : 슬라이드 애니메이션 추가">
       <created>1683877996599</created>
@@ -169,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684218383889</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="refactor : 폰트 적용">
+      <created>1684486678241</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1684486678241</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,6 +222,7 @@
     <MESSAGE value="feat : 슬라이드 애니메이션 추가" />
     <MESSAGE value="refactor : 폰트 적용 및 미디어쿼리 수정" />
     <MESSAGE value="refactor : 대표 색상 적용" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor : 대표 색상 적용" />
+    <MESSAGE value="refactor : 폰트 적용" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor : 폰트 적용" />
   </component>
 </project>
