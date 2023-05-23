@@ -59,28 +59,16 @@ d
 4pybo/static/js/ckeditor 2/plugins/div/dialogs/div.js,c\f\cf5d8dbbbca7075df0b1f11176ce92ac488e32d3
 f
 6pybo/static/js/ckeditor 2/plugins/find/dialogs/find.js,f\c\fcf58f56e1b18a9af2f6017b1531ab9f0b2686da
-T
-$migrations/versions/f1e1a9050b1b_.py,b\4\b466e143520d28f4dcde057ba7b661bf5c253705
-T
-$migrations/versions/f78bdfa035ad_.py,e\5\e5acea8a62d5e6e2d31c5748669f71991aa91616
 h
 8pybo/static/js/ckeditor 2/plugins/link/dialogs/anchor.js,d\e\dee08f07239179470bcb0f9dfad98db45e910b37
 f
 6pybo/static/js/ckeditor 2/plugins/link/dialogs/link.js,9\a\9a9508e3e3ba762ebd815403b66abbdb539d889b
-T
-$migrations/versions/f8e720ad639c_.py,b\f\bf42deafc734df03dfb44ccfffb64af7609b38e3
-T
-$migrations/versions/efe9c1e096fb_.py,a\b\abc5a890eca3d333f1d2616ae7cd5a1a8f9669d8
 k
 ;pybo/static/js/ckeditor 2/plugins/forms/dialogs/checkbox.js,6\f\6f9a6317aafd33291829c855ed6f43cf76164f6c
 l
 <pybo/static/js/ckeditor 2/plugins/forms/dialogs/textfield.js,8\f\8fc9f4585394594b4b1bcd82d3ab8173f4017cf7
-T
-$migrations/versions/f6185ed5c637_.py,a\b\ab98749b326164704572cb241989c24efab367f6
 g
 7pybo/static/js/ckeditor 2/plugins/forms/dialogs/form.js,8\1\814aee255e2c94378f232aab29ae1784f9e58e43
-T
-$migrations/versions/bcf19a8bc471_.py,2\5\25e07670b3eed624cce776627e72ac06e5bf19af
 k
 ;pybo/static/js/ckeditor 2/plugins/forms/dialogs/textarea.js,3\6\36dd0e454e0efcc75c388e6ae54b3ff282ea5a40
 i
@@ -116,13 +104,9 @@ j
 I
 pybo/views/input_views.py,8\5\8501f127dd0eeeee9ba159042a03d85f057f6f5d
 L
-pybo/views/question_views.py,c\e\ce4c5e9fd05ee4e96355fb266fe49fbac576a0f9
-L
 pybo/static/js/swiper.min.js,5\e\5e36a2972e6385d41363ebf5e15b88d55fa3cd65
 n
 >pybo/static/js/ckeditor 2/plugins/a11yhelp/dialogs/a11yhelp.js,8\5\854feb2a8d085136b1e82caa42ce1bb7f517a72b
-K
-pybo/static/js/assuretee.js,9\b\9b9c25c33a7d9727d073a7aecad4256718d85a75
 m
 =pybo/static/js/ckeditor 2/plugins/a11yhelp/dialogs/lang/nb.js,7\6\76be637db684becaf0b84f789d3a533fff7ce6c2
 E
@@ -153,8 +137,6 @@ p
 @pybo/static/js/ckeditor 2/plugins/a11yhelp/dialogs/lang/zh-cn.js,7\e\7ed33e827d6430badc0e76c69cd92e80e94f1e40
 m
 =pybo/static/js/ckeditor 2/plugins/a11yhelp/dialogs/lang/pt.js,a\2\a211e6b06e9a163d1549c802715097fbb35b7149
-I
-pybo/views/route_views.py,0\7\07148889b3c4d5377027168b0eda9b5d567b8d3a
 m
 =pybo/static/js/ckeditor 2/plugins/a11yhelp/dialogs/lang/ug.js,8\6\8672a29eaa3c819d404bcc8d6ccefc48e805dc02
 m
@@ -429,48 +411,6 @@ p
 @pybo/static/js/ckeditor 2/plugins/specialchar/dialogs/lang/ku.js,0\a\0a4d4606c048186d0c59cdee3c7e63980fd49910
 q
 Apybo/static/js/ckeditor 2/plugins/pastefromword/filter/default.js,4\1\4101721e97423a151ee6a871b81a356372586e11
-T
-$migrations/versions/0d7dbc4c351d_.py,6\a\6a50a7ffa2f63182b1a0e17360a65090acb11a69
-T
-$migrations/versions/0daed9c47e2f_.py,9\7\978a81f47f6efa20ae67788f904b3eb29221c8fe
-T
-$migrations/versions/2c660a206adf_.py,9\7\97c294de3bd6cf692f333c4000ec25621ff62747
-T
-$migrations/versions/0002affd80c9_.py,1\7\17cfa9da780ac15d91bd6f714f129fb7f55d8d83
-T
-$migrations/versions/4b0d80b147fe_.py,4\a\4a8a3878ebdd6d1955a7b05890c472a697ac57fb
-T
-$migrations/versions/6eca297157b5_.py,3\c\3cf4bbb1f178fa6f618ade7ed1dced02e6ae4301
-T
-$migrations/versions/7bf9b014e1a3_.py,d\b\db4e83c673b87b421000e13f7da86a67bd845322
-T
-$migrations/versions/7f28f1ee28ad_.py,c\6\c68eb9e6b4a26bb918711389d964eedd4937ac54
-T
-$migrations/versions/8af9eee3741c_.py,8\1\81bfb7f30d29f43c709d449cd57240ef94a0c23a
-T
-$migrations/versions/8d20832158be_.py,7\8\78adf6912ec9d288af3f8e7d600571143edd6c07
-T
-$migrations/versions/9ea3085d0529_.py,a\2\a20c25912d6ed4495d3441506202fbaeb157c49b
-T
-$migrations/versions/27e481c482a5_.py,0\7\0708e3ed3016f8fecbf87bc6f43283b72ce96e9d
-T
-$migrations/versions/64bc212abfd6_.py,b\f\bfc02341b73511c109062128f695655d6a38e3cf
-T
-$migrations/versions/72d803b9079f_.py,d\a\dab8c8f0807c062f5704ac6ae92815664e4ea48f
-T
-$migrations/versions/85aaff44c37b_.py,0\3\03d4666ce8daabd3bf64297fd0f5de5c5eb37448
-T
-$migrations/versions/86d84825a950_.py,e\3\e37610d2337411b1d6d096e72a1a10446a43296e
-T
-$migrations/versions/216dbe11c774_.py,6\4\64817711894bdecb3b49888d9b546abb6b5aceda
-T
-$migrations/versions/346f0f3beef7_.py,2\e\2e8954caba554dbc1fb3746d845273e53db15d06
-T
-$migrations/versions/3270ac23bbe7_.py,0\1\014bb8c7ba465ca2a9d180cf573d5985d1d82dd2
-T
-$migrations/versions/70712cd3e48e_.py,1\7\17e8f3aea050f2682bbd66a23048a86ed1791d18
-T
-$migrations/versions/97203df0bd15_.py,1\4\14e582d24979df2338dd40212d175a9918dafb4a
 @
 pybo/__init__.py,c\8\c8441a528c404f7faca6177bcb88b09b5f126e16
 h
@@ -483,8 +423,6 @@ m
 =pybo/static/js/ckeditor 2/plugins/a11yhelp/dialogs/lang/ar.js,2\a\2a251b535755bd23456888d6ea63d9f6ce7339bb
 p
 @pybo/static/js/ckeditor 2/plugins/specialchar/dialogs/lang/ar.js,1\5\1586fe8e2111c22949355d5dbd540479e9c29fd1
-Z
-*pybo/templates/question/question_form.html,5\1\510e096f598b331e722f23c5a2939837cb8f6a40
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
@@ -500,12 +438,8 @@ H
 pybo/static/js/swiper.js,2\6\26b7ce243b906480422a6281889e74e2deb39fbc
 I
 pybo/static/js/preview.js,1\b\1bffb8525402c017fa5cc8f2e250ac6dcd636a02
-K
-pybo/views/friends_views.py,9\c\9cb4ba8b58a063c145ebf0a72d02492f17d7ece9
 G
 pybo/templates/404.html,3\e\3e9745e0296776918e32ef5e5ae2a8587a082ca4
-\
-,pybo/templates/question/question_detail.html,c\2\c27b1d8301f9b84be7b9ba1cdba804ec2f57dade
 K
 pybo/static/css/profile.css,8\c\8c3c9a1effd708a6252042c49e62f1e3a0fd8525
 W
@@ -516,3 +450,19 @@ I
 pybo/static/css/tonte.css,6\e\6e32083b3d5f46e316fcd49f546f903874b67e78
 O
 pybo/static/css/swiper2.min.css,6\8\683bcad9d101a1c934591fd8fae3fa0eebece585
+J
+pybo/static/css/signup.css,3\4\34a0d39556543d6660d3588d79b127d3f525cea3
+G
+pybo/static/css/com.css,1\e\1e61eb740d142e8e65f4f88daf5c0bd65a0e2a5d
+E
+pybo/static/js/bar.js,6\c\6cb6145585ce84e94191bbfd144c7838774919c2
+I
+pybo/static/css/login.css,1\c\1cfb9aecc427edea1b6c7ee4019b46e038cf8112
+I
+pybo/templates/login.html,a\2\a2230be4b1fb10fadd3ddca7ff6d2e4d49860911
+M
+pybo/static/css/normalize.css,1\b\1bf61b76b150cee58c66ad85b93634f0d7e1c2e4
+O
+pybo/static/js/bootstrap.min.js,0\1\01d2ba010970f2d369fa24719d0a4d5493ffa521
+J
+pybo/templates/signup.html,7\5\754f9eff6baf238be780d617593ec623a61aaea1
