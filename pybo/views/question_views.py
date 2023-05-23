@@ -50,43 +50,43 @@ def get_location():
 
 @bp.route('/list/')
 def _list():
-        # 입력 파라미터
-        page = request.args.get('page', type=int, default=1)
-        kw = request.args.get('kw', type=str, default='')
-        so = request.args.get('so', type=str, default='recent')
+    # 입력 파라미터
+    page = request.args.get('page', type=int, default=1)
+    kw = request.args.get('kw', type=str, default='')
+    so = request.args.get('so', type=str, default='recent')
 
-        # 정렬
-        if so == 'recommend':
-            question_list = Question.query.filter(Question.user_id == "{}".format(g.user.id)).order_by(Question.create_date.desc())
+    # 정렬
+    if so == 'recommend':
+        question_list = Question.query.filter(Question.user_id == "{}".format(g.user.id)).order_by(Question.create_date.desc())
 
-        elif so == 'popular':
-            friend_ids = [friendship.user2_id for friendship in Friendship.query.filter_by(user1_id="{}".format(g.user.id)).all()]
+    elif so == 'popular':
+        friend_ids = [friendship.user2_id for friendship in Friendship.query.filter_by(user1_id="{}".format(g.user.id)).all()]
 
 
-            question_list = Question.query.filter(Question.user_id.in_(friend_ids)).order_by(Question.create_date.desc())
-        else:  # recent
-            question_list = Question.query.order_by(Question.create_date.desc())
+        question_list = Question.query.filter(Question.user_id.in_(friend_ids)).order_by(Question.create_date.desc())
+    else:  # recent
+        question_list = Question.query.order_by(Question.create_date.desc())
 
-        # 조회
-        if kw:
-            search = '%%{}%%'.format(kw)
-            sub_query = db.session.query(Answer.question_id, Answer.content, Signup_Data.user_id) \
-                .join(Signup_Data, Answer.user_id == Signup_Data.id).subquery()
-            question_list = question_list \
-                .join(Signup_Data) \
-                .outerjoin(sub_query, sub_query.c.question_id == Question.id) \
-                .filter(Question.subject.ilike(search) |  # 질문제목
-                        Question.content.ilike(search) |  # 질문내용
-                        Signup_Data.user_id.ilike(search) |  # 질문작성자
-                        sub_query.c.content.ilike(search) |  # 답변내용
-                        sub_query.c.user_id.ilike(search)  |# 답변작성자
-                        Question.local.ilike(search) #지역x
-                        ) \
-                .distinct()
+    # 조회
+    if kw:
+        search = '%%{}%%'.format(kw)
+        sub_query = db.session.query(Answer.question_id, Answer.content, Signup_Data.user_id) \
+            .join(Signup_Data, Answer.user_id == Signup_Data.id).subquery()
+        question_list = question_list \
+            .join(Signup_Data) \
+            .outerjoin(sub_query, sub_query.c.question_id == Question.id) \
+            .filter(Question.subject.ilike(search) |  # 질문제목
+                    Question.content.ilike(search) |  # 질문내용
+                    Signup_Data.user_id.ilike(search) |  # 질문작성자
+                    sub_query.c.content.ilike(search) |  # 답변내용
+                    sub_query.c.user_id.ilike(search)  |# 답변작성자
+                    Question.local.ilike(search) #지역x
+                    ) \
+            .distinct()
 
-        # 페이징 # 한 페이지에 몇 개 넣을지 조정 가능
-        question_list = question_list.paginate( per_page=12)
-        return render_template('question/question_list.html', question_list=question_list, page=page, kw=kw, so=so)
+    # 페이징 # 한 페이지에 몇 개 넣을지 조정 가능
+    question_list = question_list.paginate( per_page=12)
+    return render_template('question/question_list.html', question_list=question_list, page=page, kw=kw, so=so)
 
 
 @bp.route('/detail/<int:question_id>/')

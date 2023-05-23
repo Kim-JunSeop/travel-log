@@ -75,6 +75,39 @@ function initializeChatbot() {
 }
 initializeChatbot();
 
+// 스크롤을 자동으로 아래로 이동하는 함수
+function scrollToBottom() {
+  const chatbotMessages = document.querySelector(".chatbot-messages");
+  chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+}
+
+// 답변을 추가하는 함수
+function addAnswer(message) {
+  const chatbotMessages = document.querySelector(".chatbot-messages");
+  const answer = document.createElement("div");
+  answer.classList.add("answer");
+  answer.textContent = message;
+  chatbotMessages.appendChild(answer);
+
+  scrollToBottom(); // 스크롤 이동 함수 호출
+}
+
+// 제출 버튼 클릭 이벤트 핸들러
+function submitButtonHandler() {
+  const input = document.querySelector(".chatbot-input");
+  const message = input.value;
+
+  // 답변을 받는 동작 및 추가 로직 수행
+
+  addAnswer(message); // 답변 추가 함수 호출
+
+  input.value = ""; // 입력 필드 초기화
+}
+
+// 제출 버튼 클릭 이벤트 리스너 등록
+const submitButton = document.querySelector(".chatbot-submit");
+submitButton.addEventListener("click", submitButtonHandler);
+
 // 아래부턴 2번아이콘입니다-----------------------------------------------------------------------------------------------------
 
 // 마스킹 이벤트 리스너

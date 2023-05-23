@@ -157,7 +157,7 @@ table {
 }
 .slider_item {
     display: flex;
-
+justify-content: space-evenly;
 }
 
 .content {
@@ -452,7 +452,9 @@ body.fixed #header .gnb ul li.active a:after {
     background-position: 50% 50%;
     background-size: cover;
 }
-
+.slide img1{
+    margin-left: 10px;
+}
 /* kv */
 .kv_slide {
     position: relative;
@@ -496,20 +498,7 @@ body.fixed #header .gnb ul li.active a:after {
     color: #fff;
 }
 
-.btn_down {
-    position: absolute;
-    left: 50%;
-    margin-left: 100px;
-    margin-bottom: 40px;
-    background: url('../image/skip.png') no-repeat center / 100% auto;
-    width: 22px;
-    height: 26px;
-    z-index: 10;
-    animation-name: arrow;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
+
 
 @keyframes arrow {
     from {
@@ -535,12 +524,21 @@ body.fixed #header .gnb ul li.active a:after {
     color: #000;
     white-space: nowrap;
 }
+h1.sec_tit.aos-init.aos-animate{
+    color: #3288FF;
+}
 h2.sec_tit.aos-init.aos-animate {
     color: black;
     display: inline;
 
 }
-
+ul.block {
+    margin-top: 29px;
+    font-weight: 500;
+    font-size: 16px;
+    /* letter-spacing: 13px; */
+    line-height: 235%;
+}
 .sec_desc {
     margin-top: 42px;
     font-size: 18px;
@@ -617,7 +615,7 @@ h2.sec_tit.aos-init.aos-animate {
     position: relative;
     width: 28px;
     height: 28px;
-    background: url('../image/icon_tip.svg');
+
 }
 
 .btn_close {
@@ -1011,7 +1009,7 @@ h2.sec_tit.aos-init.aos-animate {
     height: 754px;
     z-index: 1;
     padding: 0 90px 0 30px;
-    background: url('../image/phone_bg.png') no-repeat 0 0 / 100% auto;
+
 }
 
 /* .cate_slider_section {position: absolute; top:140px; right:20px; width:480px; height:815px; z-index:1; padding:0 125px 0 45px; background:url('../image/phone-1.png') no-repeat 0 0 / 100% auto;} */
@@ -1019,7 +1017,7 @@ h2.sec_tit.aos-init.aos-animate {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 53px;
+    bottom: 180px;
     width: 1366px;
 }
 
@@ -1052,9 +1050,7 @@ h2.sec_tit.aos-init.aos-animate {
 }
 
 .cate_slider .slider_item {
-    float: left;
-    width: 310px;
-    height: 567.5px;
+   margin-top: 10%;
 
 }
 
@@ -1065,7 +1061,6 @@ h2.sec_tit.aos-init.aos-animate {
 /* sec05 B2B 사업자 전용 관리자 페이지 제공 */
 .sec_b2b.bg_image {
     /*height: 1125px;*/
-    background-image: url('../image/sec05_bg.png');
 }
 
 .sec_b2b:before {
@@ -1130,11 +1125,10 @@ h2.sec_tit.aos-init.aos-animate {
     top: -10px;
     right: 60px;
 }
-
 /* sec07 비즈니스 파트너가 되어 주세요. */
+
 .sec_contact.bg_image {
     height: 1125px; /* height:100vh; */
-    background-image: url('../image/sec07_bg.png');
 }
 
 .sec_contact:before {
@@ -1312,7 +1306,6 @@ h2.sec_tit.aos-init.aos-animate {
     top: 24px;
     width: 16px;
     height: 10px;
-    background: url('../image/bg_select.svg') no-repeat 0 0/ 100% auto;
     transition: 0.3s all;
 }
 
@@ -1374,11 +1367,11 @@ h2.sec_tit.aos-init.aos-animate {
     height: 30px;
     margin-right: 8px;
     vertical-align: middle;
-    background: url('../image/bg_check_off.svg') no-repeat 50% 50% / 100% auto;
+
 }
 
 .form_checkbox .form_obj input:checked + label {
-    background-image: url('../image/bg_check_on.svg');
+
 }
 
 .form_checkbox .btn_link {
@@ -1428,7 +1421,6 @@ h2.sec_tit.aos-init.aos-animate {
     width: 190px;
     height: 100%;
     transform: translateY(-50%);
-    background: url('../image/bg_dotted.png') repeat-x 0 center / 33px auto;
 }
 
 .form_item {
@@ -1684,7 +1676,6 @@ h2.sec_tit.aos-init.aos-animate {
     right: 0;
     width: 8px;
     height: 8px;
-    background: url('../image/ico_site_go.svg') no-repeat 0 0 / 100% auto;
     content: '';
 }
 
@@ -1761,7 +1752,6 @@ h2.sec_tit.aos-init.aos-animate {
     text-indent: -999em;
     width: 40px;
     height: 40px;
-    background: url('../image/icoClose.png') center no-repeat;
     background-size: 40px auto;
     z-index: 10;
 }
@@ -2138,17 +2128,7 @@ h2.sec_tit.aos-init.aos-animate {
         bottom: -10px;
     }
 
-    .kv_slide.slide01 {
-        background-image: url('../image/mobile_main_01.jpg');
-    }
 
-    .kv_slide.slide02 {
-        background-image: url('../image/mobile_main_02.jpg');
-    }
-
-    .kv_slide.slide03 {
-        background-image: url('../image/mobile_main_03.jpg');
-    }
 
     .sec_kv .sec_tit {
         left: 13vw;
@@ -2279,9 +2259,7 @@ h2.sec_tit.aos-init.aos-animate {
         top: 135px;
     }
 
-    .service_list_section .nav_arrow:before {
-        background-image: url('../image/mobile_service_arr.png');
-    }
+
 
     .service_list_section .nav_arrow.swiper-button-prev {
         left: 15px;
@@ -2304,11 +2282,7 @@ h2.sec_tit.aos-init.aos-animate {
         margin-top: 50px;
     }
 
-    .sec_program02.bg_image {
-        min-height: 740px;
-        height: auto;
-        background-image: url('../image/mobile_sec03_bg.png');
-    }
+
 
     .sec_program02 .sec_inner {
         padding: 110px 5px 20px;
@@ -2351,7 +2325,7 @@ h2.sec_tit.aos-init.aos-animate {
         width: 76.389vw;
         height: 134.722vw;
         padding: 0 13.1vw 0 7.5vw;
-        background-image: url('../image/mobile_phone_bg.png');
+
     }
 
     .cate_slider_wrap {
@@ -2382,9 +2356,6 @@ h2.sec_tit.aos-init.aos-animate {
         top: 65.27vw;
     }
 
-    .cate_slider_section .nav_arrow:before {
-        background-image: url('../image/mobile_bg_arrow.png');
-    }
 
     .cate_slider_section .swiper-button-next {
         left: auto;
@@ -2441,9 +2412,6 @@ h2.sec_tit.aos-init.aos-animate {
         right: 0;
     }
 
-    .sec_b2b.bg_image {
-        background-image: url('../image/mobile_sec05_bg.png');
-    }
 
     .sec_b2b .sec_inner {
         padding: 134px 20px 70px;
@@ -2496,7 +2464,6 @@ h2.sec_tit.aos-init.aos-animate {
 
     .sec_contact.bg_image {
         height: 760px;
-        background-image: url('../image/mobile_sec07_bg.png');
     }
 
     .sec_contact .sec_inner {
@@ -2669,20 +2636,6 @@ h2.sec_tit.aos-init.aos-animate {
         font-size: 0;
     }
 
-    .tit_industry:after {
-        background: url('../image/ico_industry.jpg') no-repeat 50% 50% / 100% auto;
-    }
-
-    .scrollBox_close {
-        position: absolute;
-        display: block;
-        width: 30px;
-        height: 30px;
-        top: 50%;
-        right: 15px;
-        margin-top: -15px;
-        background: url('../image/ico_sel_close.png') no-repeat 50% 50% / 16px auto;
-    }
 
     .scrollBox .scroller ul {
         padding-right: 38px;

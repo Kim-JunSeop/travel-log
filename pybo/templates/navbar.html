@@ -32,10 +32,25 @@
                     <ul>
                         <li class="nav-item ">
                             <a class="nav-link" href="{{ url_for('main.logout') }}">{{ g.user.user_name }} 님(로그아웃)</a>
+                            <hr>
                         </li>
+
                         <li><a href='/friends/find_friends'>친구찾기</a></li>
                         <li><a href="/question/list">Blog</a></li>
                         <li><a href="/input">Map</a></li>
+                        <li class="nav-item dropdown">
+                            <b class="nav-link1" id="notifications-dropdown" href="#" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                                <i class="fa fa-bell" id="notifications-icon"></i>
+                                <span class="badge badge-danger" id="unread-notifications-count"
+                                      style="display: none;"></span>
+                            </b>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="notifications-dropdown"
+                                 id="notifications-dropdown-menu">
+                                <div id="notifications-placeholder">로딩 중...</div>
+                            </div>
+                        </li>
                     </ul>
                     {% else %}
                     <ul>

@@ -10,6 +10,7 @@ from pybo.models import db, Question, Signup_Data, Friendship, AddMarker
 from pybo.views.main_views import login_required
 from werkzeug.utils import secure_filename
 import os
+from flask import current_app as app
 
 
 bp = Blueprint('route', __name__, url_prefix='/route')
@@ -71,6 +72,15 @@ def add_marker():
     image = request.files.get('img_name')
     image_path = None
 
+    local_str = ','.join(map(str, (data.get('latitude'), data.get('longitude'))))
+    existing_marker = AddMarker.query.filter_by(local=local_str, user_id=data.get('user_id')).first()
+    if existing_marker:
+        # If it does, delete it but store its img_name
+        old_image_name = existing_marker.img_name
+        db.session.delete(existing_marker)
+    else:
+        old_image_name = None
+
     if image:
         # Ensure the filename is secure
         secure_image_name = secure_filename(image.filename)
@@ -79,23 +89,23 @@ def add_marker():
         image_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', 'static', 'image', 'marker2_images', new_image_name)
         # Save the image
         image.save(image_path)
+    else:
+        # Use the existing image
+        new_image_name = old_image_name
 
-        # Instead of storing the full path in the database, just store the filename
-        local_str = ','.join(map(str, (data.get('latitude'), data.get('longitude'))))
+    marker2 = AddMarker(
+        user_id=data.get('user_id'),
+        local=local_str,  # Store latitude and longitude as a string
+        subject=data.get('title'),
+        content=data.get('content'),
+        img_name=new_image_name  # Here, store only the filename
+    )
 
-        marker2 = AddMarker(
-            user_id=data.get('user_id'),
-            local=local_str,  # Store latitude and longitude as a string
-            subject=data.get('title'),
-            content=data.get('content'),
-            img_name=new_image_name  # Here, store only the filename
-        )
-
-        db.session.add(marker2)
-        db.session.commit()
-
+    db.session.add(marker2)
+    db.session.commit()
 
     return {'message': 'New marker added successfully'}, 201
+
 
 
 

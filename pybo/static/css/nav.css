@@ -74,6 +74,13 @@ i#notifications-icon{
     font-weight: 900;
     margin-left: 5%;
 }
+i#notifications-icon {
+    float: right;
+    margin: -150px 9px;
+}
+.ul{
+    margin: 10px;
+}
 #header .gnb ul li b{
     color: blue;
 }

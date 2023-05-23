@@ -1,9 +1,9 @@
 const modalFormTemplate = `
     <div id="myModal2" class="modal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <div class="modal-content">
+            <div id ="wholecontent" class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Modal title</h5>
+                    <h5 class="modal-title">마커</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -13,23 +13,23 @@ const modalFormTemplate = `
                         <input type="hidden" id="markerID2" value="">
                         <input type="hidden" id="userID2" value="">
                         <div class="form-group">
-                            <label for="title">Title</label>
+                            <label for="title">제목</label>
                             <input type="text" class="form-control" id="title2" value="" readonly>
 
                         </div>
                         <div class="form-group">
-                            <label for="content">Content</label>
+                            <label for="content">본문</label>
                             <textarea class="form-control" id="content2" rows="10" style="width: 100%; height: 200px;" readonly></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="image">Image</label>
+                            <label for="image"></label>
                             <img id="image2" src="" alt="Uploaded image" style="width: 300px; height: auto;">
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" id="modifyButton">Modify</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="modifyorDirectButton"></button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
                 </div>
             </div>
         </div>
@@ -84,6 +84,39 @@ async function displayMarkers() {
                 customOverlay.setMap(null);
             });
 
+            const detailButton = customOverlay.a.querySelector('#detailButton');
+            if (detailButton) {
+                detailButton.addEventListener('click', function() {
+                    const modalContent = document.querySelector('.secondmodal');
+                    modalContent.innerHTML = modalFormTemplate;
+
+                    const buttonName = document.getElementById('modifyorDirectButton');
+                    buttonName.textContent = '수정';
+
+                    setTimeout(function() {
+                        const markerID = document.querySelector('#markerID2');
+                        const userID = document.querySelector('#userID2');
+                        const titleInput = document.querySelector('#title2');
+                        const contentInput = document.querySelector('#content2');
+                        const imageInput = document.querySelector('#image2');
+
+                        const contentInputModified = marker.content;
+                        contentInput.value = contentInputModified.replace(/<[^>]+>/g, '').replace(/\n/g, '');
+                        markerID.value = marker.id;
+                        userID.value = marker.user_id;
+                        titleInput.value = marker.subject;
+                        imageInput.src = `/static/image/${marker.id}/${marker.img_name}`;
+                        $('#myModal2').modal('show');
+                    }, 0);
+
+                    document.getElementById('modifyorDirectButton').addEventListener('click', function() {
+                        const directButtonurl = "http://127.0.0.1:5000/question/detail/" + marker.id;
+                        window.location.href = directButtonurl;
+
+                    });
+                });
+            }
+
             allMarkers.push({
                 userId: marker.user_id,
                 marker: newMarker,
@@ -131,7 +164,11 @@ async function displayMarkers() {
                     const modalContent = document.querySelector('.secondmodal');
                     modalContent.innerHTML = modalFormTemplate;
 
-                    // Wait until the modal form is in the document
+                    const buttonName = document.getElementById('modifyorDirectButton');
+                    buttonName.textContent = '수정';
+
+                    let imageForm; // Declare imageForm here
+
                     setTimeout(function() {
                         const markerID2 = document.querySelector('#markerID2');
                         const userID2 = document.querySelector('#userID2');
@@ -146,22 +183,64 @@ async function displayMarkers() {
                         imageInput2.src = `/static/image/marker2_images/${marker2.img_name}`;
                         $('#myModal2').modal('show');
                     }, 0);
-                    
-                    document.getElementById('modifyButton').addEventListener('click', function() {
-                        document.getElementById('title2').removeAttribute('readonly');
-                        document.getElementById('content2').removeAttribute('readonly');
-                    
-                        const imageForm = document.createElement('input');
-                        imageForm.setAttribute('type', 'file');
-                        imageForm.setAttribute('id', 'imageForm');
-                    
-                        const imageContainer = document.getElementById('image2').parentElement;
-                        imageContainer.appendChild(imageForm);
+
+                    document.getElementById('modifyorDirectButton').addEventListener('click', function() {
+                        if (buttonName.textContent === '수정') {
+                            buttonName.textContent = '저장';
+                            document.getElementById('title2').removeAttribute('readonly');
+                            document.getElementById('content2').removeAttribute('readonly');
+
+                            imageForm = document.createElement('input'); // Initialize imageForm here
+                            imageForm.setAttribute('type', 'file');
+                            imageForm.setAttribute('id', 'imageForm2');
+                            console.log(imageForm.textContent)
+
+                            const imageContainer = document.getElementById('image2').parentElement;
+                            imageContainer.appendChild(imageForm);
+                        } else if (buttonName.textContent === 'Save') {
+                            // Save the changes and send to server
+                            // ...
+                            var image;
+                            if (imageForm.files[0] != null){
+                                image = $('#imageForm2')[0].files[0]
+                            } else {
+                                image = $('#imageForm2')[0].files[0]
+                            }
+                            var title = $('#title2').val();
+                            var content = $('#content2').val();
+
+                            const localArray = marker2.local.split(',');
+                            console.log(localArray);
+                            const position2 = new kakao.maps.LatLng(localArray[0], localArray[1]);
+
+                            var formData = new FormData();
+                            formData.append('user_id', myIDval); // Replace with actual user_id value
+                            formData.append('latitude', localArray[0]);
+                            formData.append('longitude', localArray[1]);
+                            formData.append('title', title);
+                            formData.append('content', content);
+                            formData.append('img_name', image);
+                            console.log(title);
+                            console.log(content);
+                            console.log(image); // If you're not uploading a file, remove this line
+
+                            $.ajax({
+                                url: '/route/add_marker',  // Replace with server's URL
+                                method: 'POST',
+                                data: formData,
+                                contentType: false,
+                                processData: false,
+                                success: function(data) {
+                                    console.log('서버로 전송완료')
+                                }
+                            });
+                            $('#myModal2').modal('hide');
+                            buttonName.textContent = 'Modify'; // Reset the button text to 'Modify'
+                        }
                     });
+
                 });
             }
-
-
             allMarkers.push({
                 userId: marker2.user_id,
                 marker: newMarker2,
@@ -169,7 +248,6 @@ async function displayMarkers() {
             });
         })
     );
-
     updateMarkerVisibility();
 }
 
@@ -215,4 +293,3 @@ function updateMarkerVisibility() {
         }
     });
 }
-

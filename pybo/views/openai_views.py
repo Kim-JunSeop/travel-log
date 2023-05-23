@@ -5,6 +5,7 @@ from io import BytesIO
 from PIL import Image
 
 
+openaiKey = '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'
 
 bp = Blueprint('openai', __name__, url_prefix='/openai')
 
@@ -13,7 +14,7 @@ def submit():
     if request.method == "POST":
         content = request.form["content"]
 
-        openai.api_key = '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'
+        openai.api_key = openaiKey
         response = openai.Completion.create(
             model="text-davinci-003",
             prompt=f"아래 내용을 카테고리별로 정리해줘 그리고 일정 관광지 관광내용만 나오게 출력해줘:\n\n{content}.\n",
@@ -35,18 +36,18 @@ def chatbot():
     if request.method == "POST":
         message = request.json["message"]
 
-        openai.api_key = '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'
+        openai.api_key = openaiKey
         response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
-        messages=[
+            model="gpt-3.5-turbo",
+            messages=[
                 {"role": "system", "content": "You are a helpful assistant."},
                 {"role": "user", "content": f"{message}"},
             ],
-        temperature=0.7,
-        max_tokens=1000,
-        top_p=1.0,
-        frequency_penalty=0.0,
-        presence_penalty=0.0
+            temperature=0.7,
+            max_tokens=1000,
+            top_p=1.0,
+            frequency_penalty=0.0,
+            presence_penalty=0.0
         )
 
         res = response['choices'][0]['message']['content']
@@ -60,7 +61,7 @@ def dalle1():
     if request.method == "POST":
         message = request.json["message"]
 
-        openai.api_key = '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'
+        openai.api_key = openaiKey
         response = openai.Image.create(
             prompt=f"{message}",
             n=1,
@@ -105,7 +106,7 @@ def dalle2():
         image1_buffer.seek(0)
         image2_buffer.seek(0)
 
-        openai.api_key = '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'
+        openai.api_key = openaiKey
         response = openai.Image.create_edit(
             image=image1_buffer.read(),
             mask=image2_buffer.read(),
@@ -126,7 +127,7 @@ def dalle3():
     if request.method == "POST":
         message = request.form["message"]
 
-        openai.api_key = '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'
+        openai.api_key = openaiKey
         response = openai.Image.create_variation(
             image=open("corgi_and_cat_paw.png", "rb"),
             n=1,
@@ -135,5 +136,3 @@ def dalle3():
         image_url = response['data'][0]['url']
 
     return "Invalid request method", 400
-
-
