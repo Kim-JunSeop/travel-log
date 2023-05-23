@@ -33,10 +33,6 @@
     <script src="//cdn.ckeditor.com/4.21.0/full/ckeditor.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
 
 
 <!--    <script src="https://cdn.ckeditor.com/4.17.1/standard/ckeditor.js"></script>-->
@@ -90,7 +86,7 @@
         <div class="chatbot-messages">
             <!-- 이 div에 메시지가 추가됩니다. -->
         </div>
-        <input type="text" class="form-control chatbot-input" placeholder="여기에 텍스트를 입력하세요...">
+        <input type="text" class="form-control chatbot-input" placeholder="여기에 텍스트를 입력하세요">
         <button class="btn btn-primary chatbot-submit">제출</button>
     </div>
 
@@ -99,7 +95,7 @@
         <h3>이미지 생성기</h3>
         <label for="image1">마스킹 하고 싶은 이미지 원본을 업로드해주세요</label>
         <input type="file" class="form-control-file image1-input" id="image1" accept="image/*">
-        <label for="image2">마스킹 이미지가 들어갑니다!</label>
+        <label for="image2">마스킹 이미지가 들어갑니다</label>
         <input type="file" class="form-control-file image2-input" id="image2" accept="image/*">
         <textarea class="form-control prompt-input" id="prompt" rows="3" placeholder="여기에 프롬프트를 입력하세요"></textarea>
         <button class="btn btn-primary masking-button">마스킹</button>
@@ -107,7 +103,7 @@
     </div>
 
     <div class="module-content c-content" style="display:none;">
-        <h3>프롬프트 이미지 제네레이터</h3>
+        <h3>이미지 생성기</h3>
         <input type="text" class="form-control c-dalle-input" placeholder="영어로 텍스트를 입력해주세요">
         <button class="btn btn-primary c-dalle-submit">제출</button>
         <img id="displayedImage" style="display:none; width: 512px; height: 512px;"> <!-- 이미지 크기 수정 -->
@@ -115,8 +111,73 @@
         <button class="btn btn-primary" id="backBtn" style="display:none;">돌아가기</button> <!-- 돌아가기 버튼 추가 -->
     </div>
 
- <!-- 챗봇 JavaScript 코드 -->
- <script src="{{ url_for('static', filename='js/module.js') }}" defer></script>
+    <!-- 챗봇 JavaScript 코드 -->
+    <script src="{{ url_for('static', filename='js/module.js') }}" defer></script>
 </div>
+<script src="{{ url_for('static', filename='js/bar.js') }}"></script>
+<script>
+    async function fetchFollowNotifications() {
+        const response = await fetch('/friends/get_follow_notifications');
+        const notifications = await response.json();
+        return notifications;
+    }
+
+    async function displayFollowNotifications() {
+        const notifications = await fetchFollowNotifications();
+        const notificationsDropdownMenu = document.getElementById("notifications-dropdown-menu");
+        const unreadNotificationsCount = document.getElementById("unread-notifications-count");
+
+        // 알림 목록 초기화
+        notificationsDropdownMenu.innerHTML = '';
+
+        // 안 읽은 알림 개수 초기화
+        let count = 0;
+
+        notifications.forEach(notification => {
+            // 새로운 알림 항목 생성
+            const notificationItem = document.createElement("a");
+            notificationItem.classList.add("dropdown-item");
+            notificationItem.setAttribute("href", "#");
+
+            // 알림 텍스트 설정
+            notificationItem.textContent = `${notification.sender_name}님이 팔로우하였습니다.`;
+
+            // 안 읽은 알림 처리
+            if (!notification.is_read) {
+                notificationItem.classList.add("unread");
+                count++;
+            }
+
+            // 알림 목록에 추가
+            notificationsDropdownMenu.appendChild(notificationItem);
+        });
+
+        // 안 읽은 알림 개수 업데이트
+        unreadNotificationsCount.textContent = count;
+
+        // 종 모양 아이콘에 빨간 점 표시
+        if (count > 0) {
+            document.getElementById("notifications-icon").classList.add("has-unread");
+        } else {
+            document.getElementById("notifications-icon").classList.remove("has-unread");
+        }
+    }
+
+    // 알림 드롭다운 메뉴 초기 상태 설정
+    const notificationsDropdownMenu = document.getElementById("notifications-dropdown-menu");
+    notificationsDropdownMenu.style.display = 'none';
+
+    // 클릭 이벤트 리스너 추가
+    document.getElementById("notifications-dropdown").addEventListener("click", function () {
+        if (notificationsDropdownMenu.style.display === 'none') {
+            notificationsDropdownMenu.style.display = 'block';
+        } else {
+            notificationsDropdownMenu.style.display = 'none';
+        }
+    });
+
+    // 페이지 로드 시 알림 데이터 가져오기
+    document.addEventListener("DOMContentLoaded", displayFollowNotifications);
+</script>
 </body>
 </html>
