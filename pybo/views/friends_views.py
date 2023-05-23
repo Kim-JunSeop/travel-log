@@ -1,8 +1,15 @@
 from flask import Blueprint, request, render_template, g, redirect, url_for, jsonify, flash
 from pybo.views.main_views import login_required
 from pybo.models import db, Signup_Data, FollowNotification
-
+import os
 bp = Blueprint('friends', __name__, url_prefix='/friends')
+
+def file_exists(path1):
+    if path1 is not None:
+        bool1 = os.path.isfile(path1)  # The return value is True or False.
+        return bool1
+    else:
+        return False
 
 @bp.route('/find_friends')
 def find_friends():
@@ -23,6 +30,7 @@ def search():
             'user_name': users.user_name,
             'user_id': users.user_id,
             'phone': users.phone,
+            'profile_img' : users.profile_img,
             # 'image': user.image
         } for users in search_results])
 
