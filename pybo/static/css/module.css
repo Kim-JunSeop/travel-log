@@ -55,6 +55,7 @@
     right: 20px;
     padding: 20px;
     box-sizing: border-box;
+    overflow : auto;
 }
 
 /* 챗봇 모듈 스타일 */
@@ -206,3 +207,5 @@ p.chatbot {
     flex-direction: column;
         margin-bottom: 5px;
     }
+
+

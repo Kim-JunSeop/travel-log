@@ -193,7 +193,7 @@ svg {
 table {
     border-collapse: collapse
 }
-
+border-radius: 2px
 caption {
     padding-top: .75rem;
     padding-bottom: .75rem;

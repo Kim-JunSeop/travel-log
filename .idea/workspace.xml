@@ -4,16 +4,69 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e50e83cd-d74d-482a-b6b8-fd4d35492efb" name="Changes" comment="refactor : 코드 삭제">
+    <list default="true" id="5177d0bf-7fba-4eaa-9e85-d91005678ba4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/README" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/README" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/alembic.ini" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/alembic.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/env.py" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/env.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/script.py.mako" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/script.py.mako" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/0002affd80c9_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/0d7dbc4c351d_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/0daed9c47e2f_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/216dbe11c774_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/27e481c482a5_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/2c660a206adf_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/3270ac23bbe7_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/346f0f3beef7_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/4b0d80b147fe_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/639434d696bc_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/64bc212abfd6_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/6eca297157b5_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/70712cd3e48e_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/72d803b9079f_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/7bf9b014e1a3_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/7f28f1ee28ad_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/85a26ce843cc_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/85aaff44c37b_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/86d84825a950_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/8af9eee3741c_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/8d20832158be_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/97203df0bd15_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/9ea3085d0529_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/bcf19a8bc471_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/cf402a5d205b_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/d4b6a133687e_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/d5c19e4bdc78_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/efe9c1e096fb_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/f1e1a9050b1b_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/f6185ed5c637_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/f78bdfa035ad_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/f8e720ad639c_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mydata2.db" beforeDir="false" afterPath="$PROJECT_DIR$/mydata2.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/static/css/bar.css" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/css/bar.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pybo/static/css/bootstrap.4.5.0.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/css/bootstrap.4.5.0.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/static/css/bootstrap.5.5.0.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/css/bootstrap.5.5.0.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pybo/static/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/css/bootstrap.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pybo/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pybo/static/js/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/js/index/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/static/css/module.css" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/css/module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/static/css/nav.css" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/css/nav.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/static/css/normalize.css" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/css/normalize.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/static/css/story.css" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/css/story.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pybo/static/js/index/index_3customoverlay.js" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/js/index/index_3customoverlay.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/static/js/index/index_4displaymarkers.js" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/js/index/index_4displaymarkers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/static/js/module.js" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/static/js/module.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pybo/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/templates/friends/find_friends.html" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/templates/friends/find_friends.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pybo/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pybo/views/friends_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/views/friends_views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/templates/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/templates/question/question_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/templates/question/question_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/templates/question/question_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/templates/question/question_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pybo/views/openai_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pybo/views/openai_views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,29 +76,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;
-  }
-}</component>
-  <component name="GitToolBoxStore">
-    <option name="projectConfigVersion" value="5" />
-  </component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="a4d7886e-4672-40ac-a80c-b7554522a189" />
-        <option name="url" value="https://github.com/Kim-JunSeop/travel-log" />
-      </UrlAndAccount>
-    </option>
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2PE7lDGOQhpUFFNGp8tqDngb0kh" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="2QJF6WTqzn9JOdpnqbHgnurtHkx" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
@@ -53,26 +87,14 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-20&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/KIMJUNSEOP/travel-log&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.34827587&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\KIMJUNSEOP\travel-log\pybo\static\js\index" />
-    </key>
-  </component>
   <component name="RunManager">
     <configuration name="travel-log" type="PythonConfigurationType" factoryName="Python">
       <module name="travel-log" />
@@ -100,125 +122,19 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e50e83cd-d74d-482a-b6b8-fd4d35492efb" name="Changes" comment="" />
-      <created>1683010541153</created>
+      <changelist id="5177d0bf-7fba-4eaa-9e85-d91005678ba4" name="Changes" comment="" />
+      <created>1685063611909</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1683010541153</updated>
-      <workItem from="1683010542581" duration="1771000" />
-      <workItem from="1683024308249" duration="2542000" />
-      <workItem from="1683090273534" duration="2649000" />
-      <workItem from="1683355429916" duration="507000" />
-      <workItem from="1683702837376" duration="8934000" />
-      <workItem from="1683769106129" duration="2742000" />
-      <workItem from="1683867841226" duration="5022000" />
-      <workItem from="1683873668220" duration="4152000" />
-      <workItem from="1684042769729" duration="8997000" />
-      <workItem from="1684057044068" duration="72000" />
-      <workItem from="1684057128688" duration="111000" />
-      <workItem from="1684057347570" duration="3518000" />
-      <workItem from="1684124924311" duration="11364000" />
-      <workItem from="1684142695361" duration="6320000" />
-      <workItem from="1684207196260" duration="9618000" />
-      <workItem from="1684220552294" duration="41000" />
-      <workItem from="1684220619161" duration="23000" />
-      <workItem from="1684220792384" duration="50000" />
-      <workItem from="1684220988221" duration="10000" />
-      <workItem from="1684221297447" duration="19000" />
-      <workItem from="1684299485257" duration="6010000" />
-      <workItem from="1684373948534" duration="4278000" />
-      <workItem from="1684382910778" duration="4481000" />
-      <workItem from="1684473053181" duration="5200000" />
-      <workItem from="1684484852864" duration="43000" />
-      <workItem from="1684485109817" duration="1317000" />
-      <workItem from="1684486483518" duration="229000" />
-      <workItem from="1684653215976" duration="9463000" />
-      <workItem from="1684665033582" duration="1235000" />
-      <workItem from="1684666786422" duration="645000" />
-      <workItem from="1684667635281" duration="947000" />
-      <workItem from="1684672180589" duration="974000" />
-      <workItem from="1684769683930" duration="182000" />
-      <workItem from="1684818410768" duration="14891000" />
+      <updated>1685063611909</updated>
+      <workItem from="1685063613675" duration="2647000" />
+      <workItem from="1685074023024" duration="2752000" />
+      <workItem from="1685159294996" duration="1942000" />
+      <workItem from="1685425498274" duration="3000" />
     </task>
-    <task id="LOCAL-00001" summary="feat : 슬라이드 애니메이션 추가">
-      <created>1683877996599</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1683877996599</updated>
-    </task>
-    <task id="LOCAL-00002" summary="refactor : 대표 색상 적용">
-      <created>1684218383889</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1684218383889</updated>
-    </task>
-    <task id="LOCAL-00003" summary="refactor : 폰트 적용">
-      <created>1684486678241</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1684486678241</updated>
-    </task>
-    <task id="LOCAL-00004" summary="initial commit">
-      <created>1684836821632</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1684836821632</updated>
-    </task>
-    <task id="LOCAL-00005" summary="initial commit">
-      <created>1684836836686</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1684836836686</updated>
-    </task>
-    <task id="LOCAL-00006" summary="feat : 메인화면 이미지 변경">
-      <created>1684836981281</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1684836981281</updated>
-    </task>
-    <task id="LOCAL-00007" summary="refactor : 배치 변경">
-      <created>1684837044546</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1684837044546</updated>
-    </task>
-    <task id="LOCAL-00008" summary="refactor : navbar 수정">
-      <created>1684837104404</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1684837104404</updated>
-    </task>
-    <task id="LOCAL-00009" summary="refactor : 코드 삭제">
-      <created>1684837119464</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1684837119464</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat : 슬라이드 애니메이션 추가" />
-    <MESSAGE value="refactor : 폰트 적용 및 미디어쿼리 수정" />
-    <MESSAGE value="refactor : 대표 색상 적용" />
-    <MESSAGE value="refactor : 폰트 적용" />
-    <MESSAGE value="initial commit" />
-    <MESSAGE value="feat : 메인화면 이미지 변경" />
-    <MESSAGE value="refactor : 배치 변경" />
-    <MESSAGE value="refactor : navbar 수정" />
-    <MESSAGE value="refactor : 코드 삭제" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor : 코드 삭제" />
   </component>
 </project>

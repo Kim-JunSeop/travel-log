@@ -3,9 +3,10 @@ import os
 import openai
 from io import BytesIO
 from PIL import Image
+from pybo.models import db, Plan
 
 
-openaiKey = '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'
+openaiKey = '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'
 
 bp = Blueprint('openai', __name__, url_prefix='/openai')
 
@@ -35,6 +36,7 @@ def submit():
 def chatbot():
     if request.method == "POST":
         message = request.json["message"]
+        user_id = request.json["userId"]
 
         openai.api_key = openaiKey
         response = openai.ChatCompletion.create(
@@ -51,6 +53,10 @@ def chatbot():
         )
 
         res = response['choices'][0]['message']['content']
+        plan = Plan(user_id=user_id, travel_plan=res, input_prompt=message)
+        db.session.add(plan)
+        db.session.commit()
+
         return jsonify(res=res)
 
     return "Invalid request method", 400
@@ -119,9 +125,6 @@ def dalle2():
 
     return "Invalid request method", 400
 
-
-
-
 @bp.route("/dalle3", methods=["GET", "POST"])
 def dalle3():
     if request.method == "POST":
@@ -136,3 +139,21 @@ def dalle3():
         image_url = response['data'][0]['url']
 
     return "Invalid request method", 400
+
+
+@bp.route("/get_plans", methods=["GET"])
+def get_plans():
+    plans = []
+    chatbot_plans = Plan.query.filter(Plan.travel_plan.contains('여행')).all()
+
+    for chatbot_plan in chatbot_plans:
+        plans_info = {
+            'id' : chatbot_plan.id,
+            'user_id': chatbot_plan.user_id,
+            'travel_plan': chatbot_plan.travel_plan,
+            'prompt' : chatbot_plan.input_prompt
+        }
+        plans.append(plans_info)
+
+    return jsonify(plans)
+

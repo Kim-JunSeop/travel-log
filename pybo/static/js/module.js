@@ -3,6 +3,12 @@ const moduleMenu = document.querySelector(".module-menu"); //모듈 메뉴 아�
 const moduleIcons = document.querySelectorAll(".module-icon:not(.module-menu)"); //모듈 아이콘
 const moduleContents = document.querySelectorAll(".module-content"); //모듈 컨텐츠 클래스에 있는거(실제 구현사항)
 let clickedIconIndex = -1; //클릭된아이콘순서에 -1
+let myIDvalinModule;
+async function fetchMyIDinModule(){
+  const response = await fetch('/route/get_my_id');
+  const myID = await response.json();
+  return myID;
+}
 
 // 모듈 메뉴 관련 이벤트 리스너(밭전 모양으로 된 아이콘)
 function initializeModuleMenu() {
@@ -44,7 +50,8 @@ function addChatbotMessage(message, role) {
 }
 
 // 챗봇 관련 이벤트 리스너
-function initializeChatbot() {
+async function initializeChatbot() {
+  myIDvalinModule = await fetchMyIDinModule();
   // 챗봇 제출 버튼 이벤트 리스너
   document.querySelector(".chatbot-submit").addEventListener("click", async () => {
     const inputElement = document.querySelector(".chatbot-input");
@@ -52,13 +59,16 @@ function initializeChatbot() {
     inputElement.value = "";
     addChatbotMessage(message, "user");
 
+    $('#loading-spinner').css('display', 'inline-block');
+
     const response = await fetch("/openai/chatbot", {
       method: "POST",
-      body: JSON.stringify({ message }),
+      body: JSON.stringify({ message, userId: myIDvalinModule }),
       headers: { "Content-Type": "application/json" },
     });
     const data = await response.json();
     addChatbotMessage(data.res, "chatbot");
+    $('#loading-spinner').css('display', 'none');
   });
 
   // 챗봇 입력창 엔터 및 컨트롤+엔터 처리
@@ -75,45 +85,12 @@ function initializeChatbot() {
 }
 initializeChatbot();
 
-// 스크롤을 자동으로 아래로 이동하는 함수
-function scrollToBottom() {
-  const chatbotMessages = document.querySelector(".chatbot-messages");
-  chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
-}
-
-// 답변을 추가하는 함수
-function addAnswer(message) {
-  const chatbotMessages = document.querySelector(".chatbot-messages");
-  const answer = document.createElement("div");
-  answer.classList.add("answer");
-  answer.textContent = message;
-  chatbotMessages.appendChild(answer);
-
-  scrollToBottom(); // 스크롤 이동 함수 호출
-}
-
-// 제출 버튼 클릭 이벤트 핸들러
-function submitButtonHandler() {
-  const input = document.querySelector(".chatbot-input");
-  const message = input.value;
-
-  // 답변을 받는 동작 및 추가 로직 수행
-
-  addAnswer(message); // 답변 추가 함수 호출
-
-  input.value = ""; // 입력 필드 초기화
-}
-
-// 제출 버튼 클릭 이벤트 리스너 등록
-const submitButton = document.querySelector(".chatbot-submit");
-submitButton.addEventListener("click", submitButtonHandler);
-
 // 아래부턴 2번아이콘입니다-----------------------------------------------------------------------------------------------------
 
 // 마스킹 이벤트 리스너
 function setupMaskingEventListener(image) {
   document.querySelector(".masking-button").addEventListener("click", () => {
-    
+
     // 캔버스 생성 및 설정
     const canvas = document.createElement('canvas');
     canvas.width = image.width;
@@ -152,7 +129,7 @@ function setupMaskingEventListener(image) {
     confirmButton.style.left = "50%";
     confirmButton.style.transform = "translate(-50%, calc(-50% - 40px))";
     confirmButton.style.zIndex = "1001";
-    
+
     confirmButton.addEventListener("click", () => {
       const maskedDataURL = canvas.toDataURL();
       applyMaskedImageToImage2(maskedDataURL);
@@ -174,13 +151,13 @@ function applyMaskedImageToImage2(maskedImageDataUrl) {
   image2.onload = () => {
     const image2Input = document.getElementById("image2");
     fetch(maskedImageDataUrl)
-      .then(res => res.blob())
-      .then(blob => {
-        const file = new File([blob], "masked-image.png", { type: "image/png" });
-        const dataTransfer = new DataTransfer();
-        dataTransfer.items.add(file);
-        image2Input.files = dataTransfer.files;
-      });
+        .then(res => res.blob())
+        .then(blob => {
+          const file = new File([blob], "masked-image.png", { type: "image/png" });
+          const dataTransfer = new DataTransfer();
+          dataTransfer.items.add(file);
+          image2Input.files = dataTransfer.files;
+        });
   };
 }
 
@@ -216,6 +193,9 @@ function setupSubmitButtonEventListener() {
     formData.append("image2", image2Input.files[0]);
     formData.append("prompt", promptInput.value);
 
+    $('#loading-spinner2').css('display', 'inline-block');
+
+
     // 서버로 이미지와 프롬프트 전송
     fetch("/openai/dalle2", {
       method: "POST",
@@ -230,12 +210,15 @@ function setupSubmitButtonEventListener() {
           outputImage.src = dalle2ImageUrl;
           outputImage.id = "outputImage";
           document.body.appendChild(outputImage);
+          $('#loading-spinner2').css('display', 'none');
         });
       } else {
         console.error("Request failed");
+        $('#loading-spinner2').css('display', 'none');
       }
     }).catch(error => {
       console.error("Request error:", error);
+      $('#loading-spinner2').css('display', 'none');
     });
   });
 }
@@ -251,12 +234,15 @@ function initializeCustomDalle() {
   // 커스텀 DALLE 제출 버튼 이벤트 리스너
   document.querySelector(".c-dalle-submit").addEventListener("click", async () => {
     const message = document.querySelector(".c-dalle-input").value;
+    $('#loading-spinner3').css('display', 'inline-block');
     const response = await fetch("/openai/dalle1", {
       method: "POST",
       body: JSON.stringify({ message }),
       headers: { "Content-Type": "application/json" },
+      
     });
     const data = await response.json();
+    $('#loading-spinner3').css('display', 'none');
 
     // 이미지 URL을 사용하여 이미지 요소에 이미지를 설정합니다.
     const displayedImage = document.getElementById("displayedImage");
@@ -293,4 +279,34 @@ function initializeCustomDalle() {
   });
 }
 initializeCustomDalle();
-``
+
+async function initializeChatbotHistory() {
+  // 챗봇 히스토리 새로고침 버튼 이벤트 리스너
+  document.querySelector(".chatbot-history-refresh").addEventListener("click", async () => {
+    // Fetch the user's ID.
+    await fetchMyIDinModule();
+    $('#loading-spinner1').css('display', 'inline-block');
+
+
+    const response = await fetch("/openai/get_plans");
+    const data = await response.json();
+    $('#loading-spinner1').css('display', 'none');
+    console.log(data);
+    const historyContainer = document.querySelector(".chatbot-history");
+    // Clear the current history.
+    historyContainer.innerHTML = "";
+    data.forEach(plan => {
+      // Only show the plan if the user_id matches the user's ID.
+      if (plan.user_id === myIDvalinModule) {
+        const planElement = document.createElement("div");
+        planElement.innerHTML = `
+          <p class="prompt">Prompt: ${plan.prompt}</p>
+          <p class="travel-plan">Travel Plan: ${plan.travel_plan}</p>
+        `;
+        historyContainer.appendChild(planElement);
+      }
+    });
+  });
+}
+
+initializeChatbotHistory();

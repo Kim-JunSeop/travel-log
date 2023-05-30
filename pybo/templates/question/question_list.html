@@ -60,7 +60,7 @@
                                             <!-- 230426 와 진짜 이 위의 유효한 디렉토리 만들어 내려고 4시간을 해맴.. 위처럼 써야합니다!!!!!!!!!! -->
                                             {% set display_image = "/static/image/" ~ question.id ~ "/" ~ question.img_name %}
                                             {% else %}
-                                            {% set display_image = "/static/image/main_01.jpg" %}
+                                            {% set display_image = "/static/image/basic.jpg" %}
                                             {% endif %}
                                             <img src="{{ display_image }}"
                                                  width="308" height="308">
@@ -149,7 +149,9 @@
                 <a class="page-link" tabindex="-1" aria-disabled="true" href="#">다음</a>
             </li>
             {% endif %}
-            <a href="{{ url_for('question.create') }}" class="btn btn-primary">글 작성하기</a>
+            <a href="{{ url_for('question.create') }}" class="btn btn-primary1 right-align">글 작성하기</a>
+
+
         </ul>
         <!-- 페이징처리 끝 -->
 

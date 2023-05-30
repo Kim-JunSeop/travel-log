@@ -49,7 +49,7 @@ class Signup_Data(db.Model):
             self.friends.remove(user)
 
     def add_follow_notification(self, sender_id):
-        notification = FollowNotification(sender_id=sender_id, user_id=self.id)
+        notification = FollowNotification(sender_id=sender_id, user_id=self.id, phone=self.phone)
         db.session.add(notification)
         db.session.commit()
 
@@ -107,3 +107,11 @@ class Comment(db.Model):
     question = db.relationship('Question', backref=db.backref('comment_set'))
     answer_id = db.Column(db.Integer, db.ForeignKey('answer.id', ondelete='CASCADE'), nullable=True)
     answer = db.relationship('Answer', backref=db.backref('comment_set'))
+
+class Plan(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('signup__data.id', ondelete='CASCADE'), nullable=False)
+    travel_plan = db.Column(db.Text, nullable=False)
+    input_prompt = db.Column(db.Text)
+    # Relationship with the Signup_Data model
+    user = db.relationship('Signup_Data', backref=db.backref('plans', lazy='dynamic'))

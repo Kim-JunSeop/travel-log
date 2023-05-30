@@ -3009,7 +3009,7 @@ textarea.form-control.is-invalid {
 
 .btn:not(:disabled):not(.disabled) {
     cursor: pointer;
-    display: inline-block; margin: 0 1px;  float: right;
+    display: inline-block;   float: right;
     /*margin-bottom: 50px;*/
     /*margin-left: 450px;*/
 }
@@ -3030,13 +3030,23 @@ fieldset:disabled a.btn {
     background-color: #0069d9;
     border-color: #0062cc;
 }
-
+.btn-primary1:hover {
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
 a.btn.btn-primary {
     isplay: inline-block;
     margin: 0 5px;
     float: right;
 }
-
+a.btn.btn-primary1 {
+    isplay: inline-block;
+    margin-left: 420px;
+    float: right;
+    background-color: #3288FF;
+    color: white;
+}
 .btn-primary.focus,
 .btn-primary:focus {
     color: #fff;
@@ -9237,10 +9247,9 @@ h1.blog_subject {
 
 .mb-3,
 .my-3 {
-    margin-bottom: 1rem !important;
+    margin-bottom: 5rem !important;
     text-align: left;
 
-}
 
 .ml-3,
 .mx-3 {

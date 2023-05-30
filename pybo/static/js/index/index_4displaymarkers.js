@@ -57,7 +57,7 @@ async function displayMarkers() {
 
             var imageSrc1 = `/static/image/${marker.id}/${marker.img_name}`;
             if (!(await is_directory(imageSrc1))) {
-                imageSrc1 = '/static/image/main_01.jpg';
+                imageSrc1 = '/static/image/basic.jpg';
             }
             var imageSize = new kakao.maps.Size(64, 69);
             var imageOption = { offset: new kakao.maps.Point(27, 69) };
@@ -91,7 +91,7 @@ async function displayMarkers() {
                     modalContent.innerHTML = modalFormTemplate;
 
                     const buttonName = document.getElementById('modifyorDirectButton');
-                    buttonName.textContent = '수정';
+                    buttonName.textContent = '바로가기';
 
                     setTimeout(function() {
                         const markerID = document.querySelector('#markerID2');
@@ -197,7 +197,7 @@ async function displayMarkers() {
 
                             const imageContainer = document.getElementById('image2').parentElement;
                             imageContainer.appendChild(imageForm);
-                        } else if (buttonName.textContent === 'Save') {
+                        } else if (buttonName.textContent === '저장') {
                             // Save the changes and send to server
                             // ...
                             var image;

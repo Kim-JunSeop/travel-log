@@ -50,7 +50,7 @@
                             <hr>
                         </li>
                         <li><a href="/question/list">Blog</a></li>
-                        <li><a href="/input">Map</a></li>
+                        <li><a href="/input">Mypage</a></li>
                         <li class="nav-item dropdown">
                             <b class="nav-link1" id="notifications-dropdown" href="#" role="button"
                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -68,7 +68,7 @@
                     {% else %}
                     <ul>
                         <li><a href="/question/list">블로그</a></li>
-                        <li><a href="/input">나만의 지도</a></li>
+                        <li><a href="/input">Mypage</a></li>
                         <li><a href="/login">Login</a></li>
                     </ul>
                     {% endif %}
@@ -133,6 +133,9 @@
         <div class="module-icon chatbot-icon">
             <i class="fas fa-comment-alt fa-fw"></i>
         </div>
+        <div class="module-icon history-icon">
+            <i class="fas fa-history fa-fw"></i>
+        </div>
         <!-- 모듈 이미지 마스크 제너레이터 아이콘 -->
         <div class="module-icon image-generator-icon">
             <i class="fas fa-image fa-fw"></i>
@@ -150,6 +153,17 @@
         </div>
         <input type="text" class="form-control chatbot-input" placeholder="여기에 텍스트를 입력하세요...">
         <button class="btn btn-primary chatbot-submit">제출</button>
+        <div id="loading-spinner" class="spinner-border text-primary" role="status" style="display:none;">
+        </div>
+    </div>
+    <div class="module-content chatbot-history-content">
+        <h3>챗봇 히스토리</h3>
+        <div class="chatbot-history">
+            <!-- 이 div에 히스토리가 추가됩니다. -->
+        </div>
+        <button class="btn btn-primary chatbot-history-refresh">새로고침</button>
+        <div id="loading-spinner1" class="spinner-border text-primary" role="status" style="display:none;">
+        </div>
     </div>
 
     <!-- DALL-E content -->
@@ -162,13 +176,17 @@
         <textarea class="form-control prompt-input" id="prompt" rows="3" placeholder="여기에 프롬프트를 입력하세요"></textarea>
         <button class="btn btn-primary masking-button">마스킹</button>
         <button class="btn btn-primary dalle-submit" style="display:none;">제출</button>
+        <div id="loading-spinner2" class="spinner-border text-primary" role="status" style="display:none;">
+        </div>
     </div>
 
     <div class="module-content c-content" style="display:none;">
         <h3>이미지 생성기</h3>
         <input type="text" class="form-control c-dalle-input" placeholder="영어로 텍스트를 입력해주세요">
         <button class="btn btn-primary c-dalle-submit">제출</button>
-        <img id="displayedImage" style="display:none; width: 512px; height: 512px;"> <!-- 이미지 크기 수정 -->
+        <img id="displayedImage" style="display:none; width: 512px; height: 512px;">
+        <div id="loading-spinner3" class="spinner-border text-primary" role="status" style="display:none;">
+        </div> <!-- 이미지 크기 수정 -->
         <a class="btn btn-primary" id="downloadBtn" style="display:none;">다운로드</a> <!-- 다운로드 버튼을 <a> 태그로 수정 -->
         <button class="btn btn-primary" id="backBtn" style="display:none;">돌아가기</button> <!-- 돌아가기 버튼 추가 -->
     </div>

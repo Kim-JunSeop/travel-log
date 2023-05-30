@@ -24,9 +24,9 @@ async function createCustomOverlay(markerData, isMarker2) {
                     <div class="slide-button right"></div>
                 </div>
                 <p>${markerData.subject}</p>
-                <p><a href="http://127.0.0.1:5000/question/detail/${markerData.id}">바로가기</a></p>
+                <button><a href="http://127.0.0.1:5000/question/detail/${markerData.id}">바로가기</a></button>
                 <p><button id="detailButton">자세히보기</button></p>
-               <img class="infoClose" src="{{ url_for('static', filename='image/xbutton.png') }}" onclick="closeOverlay()"</img>
+                    <button class="infoClose" onclick="closeOverlay()">X</button>
             </div>
         </div>
     `;
