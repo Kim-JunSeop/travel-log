@@ -9,7 +9,6 @@
 - 이외에 ChatGPT를 이용한 여행 계획 생성 및 블로그에 사용할 이미지 생성 등, 다양한 부가 기능을 제공합니다.
 - 여행의 시작과 끝, 계획과 기록까지 함께 하고자 하는 Travel-log 입니다.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/30879997-474b-4eaa-b678-bb51e8e4281d/e6140835-c35b-47f4-be0c-62d2733010e1/image.png)
 
 ### 🙋‍♂️ 역할
 
